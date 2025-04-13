@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\QLCuaHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86E6DC7E-C4A6-4004-987C-B5197B4E77C6}|DAL\\DAL.csproj|d:\\qlcuahang\\dal\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86E6DC7E-C4A6-4004-987C-B5197B4E77C6}|DAL\\DAL.csproj|solutionrelative:dal\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DataProvider.cs",
-              "DocumentMoniker": "D:\\QLCuaHang\\DAL\\DataProvider.cs",
-              "RelativeDocumentMoniker": "DAL\\DataProvider.cs",
-              "ToolTip": "D:\\QLCuaHang\\DAL\\DataProvider.cs",
-              "RelativeToolTip": "DAL\\DataProvider.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwBgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DashboardForm.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "GUI\\DashboardForm.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.cs [Design]",
+              "RelativeToolTip": "GUI\\DashboardForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:35:04.704Z",
+              "WhenOpened": "2025-04-13T14:24:42.186Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardForm.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "GUI\\DashboardForm.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.cs",
+              "RelativeToolTip": "GUI\\DashboardForm.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwDYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:17:16.938Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardForm.Designer.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\DashboardForm.Designer.cs",
+              "RelativeDocumentMoniker": "GUI\\DashboardForm.Designer.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.Designer.cs",
+              "RelativeToolTip": "GUI\\DashboardForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:18:30.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\Program.cs",
+              "RelativeDocumentMoniker": "GUI\\Program.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\Program.cs",
+              "RelativeToolTip": "GUI\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA8wA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:18:12.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmChucVu.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmChucVu.cs",
+              "RelativeDocumentMoniker": "GUI\\frmChucVu.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmChucVu.cs [Design]",
+              "RelativeToolTip": "GUI\\frmChucVu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:16:47.23Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
