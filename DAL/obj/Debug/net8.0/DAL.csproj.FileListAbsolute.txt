@@ -1,0 +1,15 @@
+D:\QLCuaHang\DAL\bin\Debug\net8.0\DAL.deps.json
+D:\QLCuaHang\DAL\bin\Debug\net8.0\DAL.dll
+D:\QLCuaHang\DAL\bin\Debug\net8.0\DAL.pdb
+D:\QLCuaHang\DAL\bin\Debug\net8.0\DTO.dll
+D:\QLCuaHang\DAL\bin\Debug\net8.0\DTO.pdb
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.csproj.Up2Date
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.dll
+D:\QLCuaHang\DAL\obj\Debug\net8.0\refint\DAL.dll
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.pdb
+D:\QLCuaHang\DAL\obj\Debug\net8.0\ref\DAL.dll

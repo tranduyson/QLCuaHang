@@ -1,0 +1,79 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sdf
+*.cache
+*.dbmdl
+*.pidb
+*.svclog
+
+# Visual Studio Code settings
+.vscode/
+
+# Rider project files
+.idea/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# OS-generated files
+.DS_Store
+*.log
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Visual Studio folder
+.vs/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# ASP.NET temp files
+aspnet-client/
+ClientBin/
+Generated_Code/
+
+# Others
+*.bak
+*.orig
+
+# Publish profiles
+Properties/PublishProfiles/
+
+# Backup & temporary files
+*.tmp
+*.bak
+*.old
+*.swp
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Local database files
+*.mdf
+*.ldf
+
+# Rider + JetBrains files
+.idea/
+*.sln.iml
+
+# Entity Framework Migrations history
+Migrations/
+
+# dotenv (if using)
+.env

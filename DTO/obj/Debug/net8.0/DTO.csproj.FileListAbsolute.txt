@@ -1,0 +1,11 @@
+D:\QLCuaHang\DTO\bin\Debug\net8.0\DTO.deps.json
+D:\QLCuaHang\DTO\bin\Debug\net8.0\DTO.dll
+D:\QLCuaHang\DTO\bin\Debug\net8.0\DTO.pdb
+D:\QLCuaHang\DTO\obj\Debug\net8.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\QLCuaHang\DTO\obj\Debug\net8.0\DTO.AssemblyInfoInputs.cache
+D:\QLCuaHang\DTO\obj\Debug\net8.0\DTO.AssemblyInfo.cs
+D:\QLCuaHang\DTO\obj\Debug\net8.0\DTO.csproj.CoreCompileInputs.cache
+D:\QLCuaHang\DTO\obj\Debug\net8.0\DTO.dll
+D:\QLCuaHang\DTO\obj\Debug\net8.0\refint\DTO.dll
+D:\QLCuaHang\DTO\obj\Debug\net8.0\DTO.pdb
+D:\QLCuaHang\DTO\obj\Debug\net8.0\ref\DTO.dll
