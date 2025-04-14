@@ -36,3 +36,8 @@ D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\ref\GUI.dll
 D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\GUI.sourcelink.json
 D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\DashboardWinForm.frmDashboard.resources
 D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\GUI.Properties.Resources.resources
+D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\GUI.frmPhieuNhap.resources
+D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\GUI.frmDonHang.resources
+D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\GUI.frmChiTietDonHang.resources
+D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\GUI.frmChiTietPhieuNhap.resources
+D:\QLCuaHang\GUI\obj\Debug\net8.0-windows\GUI.frmLuong.resources

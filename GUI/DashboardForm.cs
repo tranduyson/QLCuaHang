@@ -13,6 +13,11 @@ namespace DashboardWinForm
             LoadFormToTab(new frmKhachHang(), tabKhachHang);
             LoadFormToTab(new frmChucVu(), tabChucVu);
             LoadFormToTab(new frmSanPham(), tabSanPham);
+            LoadFormToTab(new frmChiTietDonHang(), tabChiTietDonHang);
+            LoadFormToTab(new frmChiTietPhieuNhap(), tabChiTietNhap);
+            LoadFormToTab(new frmDonHang(), tabDonHang);
+            LoadFormToTab(new frmLuong(), tabLuong);
+            LoadFormToTab(new frmPhieuNhap(), tabPhieuNhap);
         }
         private void LoadFormToTab(Form form, TabPage tab)
         {
@@ -103,6 +108,7 @@ namespace DashboardWinForm
             button7.TextAlign = ContentAlignment.BottomCenter;
             button7.TextImageRelation = TextImageRelation.ImageAboveText;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -116,6 +122,7 @@ namespace DashboardWinForm
             button8.Text = "Phiếu nhập";
             button8.TextImageRelation = TextImageRelation.ImageAboveText;
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -129,6 +136,7 @@ namespace DashboardWinForm
             button9.TextAlign = ContentAlignment.BottomCenter;
             button9.TextImageRelation = TextImageRelation.ImageAboveText;
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button4
             // 
@@ -142,6 +150,7 @@ namespace DashboardWinForm
             button4.TextAlign = ContentAlignment.BottomCenter;
             button4.TextImageRelation = TextImageRelation.ImageAboveText;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -155,6 +164,7 @@ namespace DashboardWinForm
             button5.TextAlign = ContentAlignment.BottomCenter;
             button5.TextImageRelation = TextImageRelation.ImageAboveText;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -168,6 +178,7 @@ namespace DashboardWinForm
             button6.TextAlign = ContentAlignment.BottomCenter;
             button6.TextImageRelation = TextImageRelation.ImageAboveText;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button3
             // 
@@ -181,6 +192,7 @@ namespace DashboardWinForm
             button3.TextAlign = ContentAlignment.BottomCenter;
             button3.TextImageRelation = TextImageRelation.ImageAboveText;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // btnNhanVien
             // 
@@ -332,7 +344,42 @@ namespace DashboardWinForm
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab =tabDonHang;
+            tabControl1.SelectedTab = tabDonHang;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabChucVu;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabKhachHang;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabSanPham;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabLuong;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabChiTietDonHang;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPhieuNhap;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabChiTietNhap;
         }
     }
 }

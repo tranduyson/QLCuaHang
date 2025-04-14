@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmSanPham
+    partial class frmChiTietDonHang
     {
         /// <summary>
         /// Required designer variable.
@@ -34,23 +34,21 @@
             btnAdd = new MaterialSkin.Controls.MaterialButton();
             txtTimKiem = new MaterialSkin.Controls.MaterialTextBox();
             btnTimKiem = new MaterialSkin.Controls.MaterialButton();
-            dataGridViewSanPham = new DataGridView();
+            dataGridViewChiTietDonHang = new DataGridView();
             txtMaSP = new TextBox();
             lblMaSP = new Label();
-            txtTenSP = new TextBox();
-            lblTenSP = new Label();
-            txtDonVi = new TextBox();
-            lblDonVi = new Label();
-            numGiaNhap = new NumericUpDown();
-            lblGiaNhap = new Label();
-            numGiaBan = new NumericUpDown();
-            lblGiaBan = new Label();
-            numTonKho = new NumericUpDown();
-            lblTonKho = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewSanPham).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numGiaNhap).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numGiaBan).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numTonKho).BeginInit();
+            numDonGia = new NumericUpDown();
+            lblDonGia = new Label();
+            txtMaDH = new TextBox();
+            lblMaDH = new Label();
+            numThanhTien = new NumericUpDown();
+            lblThanhTien = new Label();
+            numSoLuong = new NumericUpDown();
+            lblSoLuong = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewChiTietDonHang).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numDonGia).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numThanhTien).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numSoLuong).BeginInit();
             SuspendLayout();
             // 
             // btnLamMoi
@@ -61,18 +59,17 @@
             btnLamMoi.Depth = 0;
             btnLamMoi.HighEmphasis = true;
             btnLamMoi.Icon = null;
-            btnLamMoi.Location = new Point(515, 49);
+            btnLamMoi.Location = new Point(510, 46);
             btnLamMoi.Margin = new Padding(5);
             btnLamMoi.MouseState = MaterialSkin.MouseState.HOVER;
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.NoAccentTextColor = Color.Empty;
             btnLamMoi.Size = new Size(106, 43);
-            btnLamMoi.TabIndex = 31;
+            btnLamMoi.TabIndex = 38;
             btnLamMoi.Text = "Làm mới";
             btnLamMoi.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
             btnLamMoi.UseAccentColor = false;
             btnLamMoi.UseVisualStyleBackColor = true;
-            btnLamMoi.Click += btnLamMoi_Click_1;
             // 
             // btnDelete
             // 
@@ -84,13 +81,13 @@
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.HighEmphasis = true;
             btnDelete.Icon = null;
-            btnDelete.Location = new Point(353, 469);
+            btnDelete.Location = new Point(364, 391);
             btnDelete.Margin = new Padding(5);
             btnDelete.MouseState = MaterialSkin.MouseState.HOVER;
             btnDelete.Name = "btnDelete";
             btnDelete.NoAccentTextColor = Color.Empty;
             btnDelete.Size = new Size(91, 44);
-            btnDelete.TabIndex = 30;
+            btnDelete.TabIndex = 37;
             btnDelete.Text = "Xóa";
             btnDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
             btnDelete.UseAccentColor = true;
@@ -104,13 +101,13 @@
             btnUpdate.Depth = 0;
             btnUpdate.HighEmphasis = true;
             btnUpdate.Icon = null;
-            btnUpdate.Location = new Point(198, 469);
+            btnUpdate.Location = new Point(209, 391);
             btnUpdate.Margin = new Padding(5);
             btnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
             btnUpdate.Name = "btnUpdate";
             btnUpdate.NoAccentTextColor = Color.Empty;
             btnUpdate.Size = new Size(87, 44);
-            btnUpdate.TabIndex = 29;
+            btnUpdate.TabIndex = 36;
             btnUpdate.Text = "Sửa";
             btnUpdate.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnUpdate.UseAccentColor = false;
@@ -124,13 +121,13 @@
             btnAdd.Depth = 0;
             btnAdd.HighEmphasis = true;
             btnAdd.Icon = null;
-            btnAdd.Location = new Point(43, 469);
+            btnAdd.Location = new Point(51, 391);
             btnAdd.Margin = new Padding(5);
             btnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             btnAdd.Name = "btnAdd";
             btnAdd.NoAccentTextColor = Color.Empty;
             btnAdd.Size = new Size(90, 44);
-            btnAdd.TabIndex = 28;
+            btnAdd.TabIndex = 35;
             btnAdd.Text = "Thêm";
             btnAdd.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnAdd.UseAccentColor = false;
@@ -141,15 +138,15 @@
             txtTimKiem.AnimateReadOnly = false;
             txtTimKiem.BorderStyle = BorderStyle.None;
             txtTimKiem.Depth = 0;
-            txtTimKiem.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtTimKiem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtTimKiem.LeadingIcon = null;
-            txtTimKiem.Location = new Point(629, 49);
+            txtTimKiem.Location = new Point(624, 46);
             txtTimKiem.MaxLength = 50;
             txtTimKiem.MouseState = MaterialSkin.MouseState.OUT;
             txtTimKiem.Multiline = false;
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(517, 36);
-            txtTimKiem.TabIndex = 27;
+            txtTimKiem.TabIndex = 34;
             txtTimKiem.Text = "";
             txtTimKiem.TrailingIcon = null;
             txtTimKiem.UseTallSize = false;
@@ -162,188 +159,165 @@
             btnTimKiem.Depth = 0;
             btnTimKiem.HighEmphasis = true;
             btnTimKiem.Icon = null;
-            btnTimKiem.Location = new Point(1168, 49);
+            btnTimKiem.Location = new Point(1163, 46);
             btnTimKiem.Margin = new Padding(5);
             btnTimKiem.MouseState = MaterialSkin.MouseState.HOVER;
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.NoAccentTextColor = Color.Empty;
             btnTimKiem.Size = new Size(98, 43);
-            btnTimKiem.TabIndex = 26;
+            btnTimKiem.TabIndex = 33;
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnTimKiem.UseAccentColor = false;
             btnTimKiem.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewSanPham
+            // dataGridViewChiTietDonHang
             // 
-            dataGridViewSanPham.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewSanPham.Location = new Point(515, 116);
-            dataGridViewSanPham.Name = "dataGridViewSanPham";
-            dataGridViewSanPham.RowHeadersWidth = 51;
-            dataGridViewSanPham.Size = new Size(751, 520);
-            dataGridViewSanPham.TabIndex = 25;
+            dataGridViewChiTietDonHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewChiTietDonHang.Location = new Point(510, 113);
+            dataGridViewChiTietDonHang.Name = "dataGridViewChiTietDonHang";
+            dataGridViewChiTietDonHang.RowHeadersWidth = 51;
+            dataGridViewChiTietDonHang.Size = new Size(751, 520);
+            dataGridViewChiTietDonHang.TabIndex = 32;
             // 
             // txtMaSP
             // 
-            txtMaSP.Location = new Point(179, 49);
+            txtMaSP.Location = new Point(247, 112);
             txtMaSP.Margin = new Padding(3, 4, 3, 4);
             txtMaSP.Name = "txtMaSP";
             txtMaSP.ReadOnly = true;
             txtMaSP.Size = new Size(154, 27);
-            txtMaSP.TabIndex = 39;
+            txtMaSP.TabIndex = 46;
             // 
             // lblMaSP
             // 
             lblMaSP.BorderStyle = BorderStyle.FixedSingle;
             lblMaSP.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblMaSP.ForeColor = SystemColors.ActiveCaptionText;
-            lblMaSP.Location = new Point(17, 46);
+            lblMaSP.Location = new Point(85, 112);
             lblMaSP.Margin = new Padding(6, 7, 6, 7);
             lblMaSP.Name = "lblMaSP";
             lblMaSP.Size = new Size(115, 30);
-            lblMaSP.TabIndex = 38;
+            lblMaSP.TabIndex = 45;
             lblMaSP.Text = "Mã sản phẩm";
             lblMaSP.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtTenSP
+            // numDonGia
             // 
-            txtTenSP.Location = new Point(177, 100);
-            txtTenSP.Margin = new Padding(3, 4, 3, 4);
-            txtTenSP.Name = "txtTenSP";
-            txtTenSP.Size = new Size(309, 27);
-            txtTenSP.TabIndex = 41;
+            numDonGia.Location = new Point(247, 226);
+            numDonGia.Margin = new Padding(3, 4, 3, 4);
+            numDonGia.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            numDonGia.Name = "numDonGia";
+            numDonGia.Size = new Size(154, 27);
+            numDonGia.TabIndex = 44;
             // 
-            // lblTenSP
+            // lblDonGia
             // 
-            lblTenSP.BorderStyle = BorderStyle.FixedSingle;
-            lblTenSP.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblTenSP.ForeColor = SystemColors.ActiveCaptionText;
-            lblTenSP.Location = new Point(17, 100);
-            lblTenSP.Margin = new Padding(6, 7, 6, 7);
-            lblTenSP.Name = "lblTenSP";
-            lblTenSP.Size = new Size(115, 30);
-            lblTenSP.TabIndex = 40;
-            lblTenSP.Text = "Tên sản phẩm";
-            lblTenSP.TextAlign = ContentAlignment.MiddleCenter;
+            lblDonGia.BorderStyle = BorderStyle.FixedSingle;
+            lblDonGia.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblDonGia.ForeColor = SystemColors.ActiveCaptionText;
+            lblDonGia.Location = new Point(85, 226);
+            lblDonGia.Margin = new Padding(6, 7, 6, 7);
+            lblDonGia.Name = "lblDonGia";
+            lblDonGia.Size = new Size(115, 30);
+            lblDonGia.TabIndex = 43;
+            lblDonGia.Text = "Đơn giá";
+            lblDonGia.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtDonVi
+            // txtMaDH
             // 
-            txtDonVi.Location = new Point(177, 156);
-            txtDonVi.Margin = new Padding(3, 4, 3, 4);
-            txtDonVi.Name = "txtDonVi";
-            txtDonVi.Size = new Size(309, 27);
-            txtDonVi.TabIndex = 43;
+            txtMaDH.Location = new Point(247, 55);
+            txtMaDH.Margin = new Padding(3, 4, 3, 4);
+            txtMaDH.Name = "txtMaDH";
+            txtMaDH.ReadOnly = true;
+            txtMaDH.Size = new Size(154, 27);
+            txtMaDH.TabIndex = 40;
             // 
-            // lblDonVi
+            // lblMaDH
             // 
-            lblDonVi.BorderStyle = BorderStyle.FixedSingle;
-            lblDonVi.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblDonVi.ForeColor = SystemColors.ActiveCaptionText;
-            lblDonVi.Location = new Point(17, 156);
-            lblDonVi.Margin = new Padding(6, 7, 6, 7);
-            lblDonVi.Name = "lblDonVi";
-            lblDonVi.Size = new Size(115, 30);
-            lblDonVi.TabIndex = 42;
-            lblDonVi.Text = "Đơn vị";
-            lblDonVi.TextAlign = ContentAlignment.MiddleCenter;
+            lblMaDH.BorderStyle = BorderStyle.FixedSingle;
+            lblMaDH.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblMaDH.ForeColor = SystemColors.ActiveCaptionText;
+            lblMaDH.Location = new Point(85, 52);
+            lblMaDH.Margin = new Padding(6, 7, 6, 7);
+            lblMaDH.Name = "lblMaDH";
+            lblMaDH.Size = new Size(115, 30);
+            lblMaDH.TabIndex = 39;
+            lblMaDH.Text = "Mã đơn hàng";
+            lblMaDH.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // numGiaNhap
+            // numThanhTien
             // 
-            numGiaNhap.Location = new Point(178, 263);
-            numGiaNhap.Margin = new Padding(3, 4, 3, 4);
-            numGiaNhap.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
-            numGiaNhap.Name = "numGiaNhap";
-            numGiaNhap.Size = new Size(314, 27);
-            numGiaNhap.TabIndex = 45;
+            numThanhTien.Location = new Point(247, 281);
+            numThanhTien.Margin = new Padding(3, 4, 3, 4);
+            numThanhTien.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            numThanhTien.Name = "numThanhTien";
+            numThanhTien.Size = new Size(154, 27);
+            numThanhTien.TabIndex = 48;
             // 
-            // lblGiaNhap
+            // lblThanhTien
             // 
-            lblGiaNhap.BorderStyle = BorderStyle.FixedSingle;
-            lblGiaNhap.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblGiaNhap.ForeColor = SystemColors.ActiveCaptionText;
-            lblGiaNhap.Location = new Point(18, 263);
-            lblGiaNhap.Margin = new Padding(6, 7, 6, 7);
-            lblGiaNhap.Name = "lblGiaNhap";
-            lblGiaNhap.Size = new Size(115, 30);
-            lblGiaNhap.TabIndex = 44;
-            lblGiaNhap.Text = "Giá Nhập";
-            lblGiaNhap.TextAlign = ContentAlignment.MiddleCenter;
+            lblThanhTien.BorderStyle = BorderStyle.FixedSingle;
+            lblThanhTien.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblThanhTien.ForeColor = SystemColors.ActiveCaptionText;
+            lblThanhTien.Location = new Point(85, 281);
+            lblThanhTien.Margin = new Padding(6, 7, 6, 7);
+            lblThanhTien.Name = "lblThanhTien";
+            lblThanhTien.Size = new Size(115, 30);
+            lblThanhTien.TabIndex = 47;
+            lblThanhTien.Text = "Thành tiền";
+            lblThanhTien.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // numGiaBan
+            // numSoLuong
             // 
-            numGiaBan.Location = new Point(177, 210);
-            numGiaBan.Margin = new Padding(3, 4, 3, 4);
-            numGiaBan.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
-            numGiaBan.Name = "numGiaBan";
-            numGiaBan.Size = new Size(314, 27);
-            numGiaBan.TabIndex = 47;
+            numSoLuong.Location = new Point(247, 170);
+            numSoLuong.Margin = new Padding(3, 4, 3, 4);
+            numSoLuong.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            numSoLuong.Name = "numSoLuong";
+            numSoLuong.Size = new Size(154, 27);
+            numSoLuong.TabIndex = 50;
             // 
-            // lblGiaBan
+            // lblSoLuong
             // 
-            lblGiaBan.BorderStyle = BorderStyle.FixedSingle;
-            lblGiaBan.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblGiaBan.ForeColor = SystemColors.ActiveCaptionText;
-            lblGiaBan.Location = new Point(17, 210);
-            lblGiaBan.Margin = new Padding(6, 7, 6, 7);
-            lblGiaBan.Name = "lblGiaBan";
-            lblGiaBan.Size = new Size(115, 30);
-            lblGiaBan.TabIndex = 46;
-            lblGiaBan.Text = "Giá bán";
-            lblGiaBan.TextAlign = ContentAlignment.MiddleCenter;
+            lblSoLuong.BorderStyle = BorderStyle.FixedSingle;
+            lblSoLuong.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblSoLuong.ForeColor = SystemColors.ActiveCaptionText;
+            lblSoLuong.Location = new Point(85, 170);
+            lblSoLuong.Margin = new Padding(6, 7, 6, 7);
+            lblSoLuong.Name = "lblSoLuong";
+            lblSoLuong.Size = new Size(115, 30);
+            lblSoLuong.TabIndex = 49;
+            lblSoLuong.Text = "Số Lượng";
+            lblSoLuong.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // numTonKho
-            // 
-            numTonKho.Location = new Point(178, 317);
-            numTonKho.Margin = new Padding(3, 4, 3, 4);
-            numTonKho.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
-            numTonKho.Name = "numTonKho";
-            numTonKho.Size = new Size(314, 27);
-            numTonKho.TabIndex = 49;
-            // 
-            // lblTonKho
-            // 
-            lblTonKho.BorderStyle = BorderStyle.FixedSingle;
-            lblTonKho.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblTonKho.ForeColor = SystemColors.ActiveCaptionText;
-            lblTonKho.Location = new Point(18, 317);
-            lblTonKho.Margin = new Padding(6, 7, 6, 7);
-            lblTonKho.Name = "lblTonKho";
-            lblTonKho.Size = new Size(115, 30);
-            lblTonKho.TabIndex = 48;
-            lblTonKho.Text = "Tồn kho";
-            lblTonKho.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // frmSanPham
+            // frmChiTietDonHang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1299, 679);
-            Controls.Add(numTonKho);
-            Controls.Add(lblTonKho);
-            Controls.Add(numGiaBan);
-            Controls.Add(lblGiaBan);
-            Controls.Add(numGiaNhap);
-            Controls.Add(lblGiaNhap);
-            Controls.Add(txtDonVi);
-            Controls.Add(lblDonVi);
-            Controls.Add(txtTenSP);
-            Controls.Add(lblTenSP);
+            Controls.Add(numSoLuong);
+            Controls.Add(lblSoLuong);
+            Controls.Add(numThanhTien);
+            Controls.Add(lblThanhTien);
             Controls.Add(txtMaSP);
             Controls.Add(lblMaSP);
+            Controls.Add(numDonGia);
+            Controls.Add(lblDonGia);
+            Controls.Add(txtMaDH);
+            Controls.Add(lblMaDH);
             Controls.Add(btnLamMoi);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnAdd);
             Controls.Add(txtTimKiem);
             Controls.Add(btnTimKiem);
-            Controls.Add(dataGridViewSanPham);
-            Name = "frmSanPham";
-            Text = "frmSanPham";
-            Load += frmSanPham_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewSanPham).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numGiaNhap).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numGiaBan).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numTonKho).EndInit();
+            Controls.Add(dataGridViewChiTietDonHang);
+            Name = "frmChiTietDonHang";
+            Text = "frmChiTietDonHang";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewChiTietDonHang).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numDonGia).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numThanhTien).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numSoLuong).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -356,18 +330,16 @@
         private MaterialSkin.Controls.MaterialButton btnAdd;
         private MaterialSkin.Controls.MaterialTextBox txtTimKiem;
         private MaterialSkin.Controls.MaterialButton btnTimKiem;
-        private DataGridView dataGridViewSanPham;
+        private DataGridView dataGridViewChiTietDonHang;
         private TextBox txtMaSP;
         private Label lblMaSP;
-        private TextBox txtTenSP;
-        private Label lblTenSP;
-        private TextBox txtDonVi;
-        private Label lblDonVi;
-        private NumericUpDown numGiaNhap;
-        private Label lblGiaNhap;
-        private NumericUpDown numGiaBan;
-        private Label lblGiaBan;
-        private NumericUpDown numTonKho;
-        private Label lblTonKho;
+        private NumericUpDown numDonGia;
+        private Label lblDonGia;
+        private TextBox txtMaDH;
+        private Label lblMaDH;
+        private NumericUpDown numThanhTien;
+        private Label lblThanhTien;
+        private NumericUpDown numSoLuong;
+        private Label lblSoLuong;
     }
 }

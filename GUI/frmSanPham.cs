@@ -88,5 +88,15 @@ namespace GUI
         {
 
         }
+
+        private void frmSanPham_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLamMoi_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

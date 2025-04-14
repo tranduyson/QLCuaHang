@@ -7,20 +7,84 @@
       "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|D:\\QLCuaHang\\gui\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmchitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmchitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmchitietphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmchitietphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|D:\\QLCuaHang\\gui\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|D:\\QLCuaHang\\gui\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|D:\\QLCuaHang\\gui\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmdonhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmdonhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmkhachhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmkhachhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C90CBA-E343-469B-BFAF-5424D3700C53}|DTO\\DTO.csproj|d:\\qlcuahang\\dto\\nhanviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C90CBA-E343-469B-BFAF-5424D3700C53}|DTO\\DTO.csproj|solutionrelative:dto\\nhanviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C90CBA-E343-469B-BFAF-5424D3700C53}|DTO\\DTO.csproj|d:\\qlcuahang\\dto\\phieunhapdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C90CBA-E343-469B-BFAF-5424D3700C53}|DTO\\DTO.csproj|solutionrelative:dto\\phieunhapdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|d:\\qlcuahang\\gui\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935F37C2-2208-4BC4-B661-FF38996C2CBB}|GUI\\GUI.csproj|solutionrelative:gui\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,16 +94,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmLuong.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmLuong.cs",
+              "RelativeDocumentMoniker": "GUI\\frmLuong.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmLuong.cs [Design]",
+              "RelativeToolTip": "GUI\\frmLuong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:45:16.941Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmChiTietPhieuNhap.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmChiTietPhieuNhap.cs",
+              "RelativeDocumentMoniker": "GUI\\frmChiTietPhieuNhap.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmChiTietPhieuNhap.cs [Design]",
+              "RelativeToolTip": "GUI\\frmChiTietPhieuNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:41:04.569Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DashboardForm.cs [Design]",
               "DocumentMoniker": "D:\\QLCuaHang\\GUI\\DashboardForm.cs",
               "RelativeDocumentMoniker": "GUI\\DashboardForm.cs",
-              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.cs [Design]",
-              "RelativeToolTip": "GUI\\DashboardForm.cs [Design]",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.cs [Design]*",
+              "RelativeToolTip": "GUI\\DashboardForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T14:24:42.186Z",
               "EditorCaption": " [Design]"
@@ -50,9 +138,9 @@
               "Title": "DashboardForm.cs",
               "DocumentMoniker": "D:\\QLCuaHang\\GUI\\DashboardForm.cs",
               "RelativeDocumentMoniker": "GUI\\DashboardForm.cs",
-              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.cs",
-              "RelativeToolTip": "GUI\\DashboardForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAvwAsAAAAqAAAAAAAAAA==",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.cs*",
+              "RelativeToolTip": "GUI\\DashboardForm.cs*",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAjwFoBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T14:17:16.938Z",
               "EditorCaption": ""
@@ -60,32 +148,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DashboardForm.Designer.cs",
-              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\DashboardForm.Designer.cs",
-              "RelativeDocumentMoniker": "GUI\\DashboardForm.Designer.cs",
-              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.Designer.cs",
-              "RelativeToolTip": "GUI\\DashboardForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "frmChiTietDonHang.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmChiTietDonHang.cs",
+              "RelativeDocumentMoniker": "GUI\\frmChiTietDonHang.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmChiTietDonHang.cs [Design]",
+              "RelativeToolTip": "GUI\\frmChiTietDonHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:18:30.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:47:01.886Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\Program.cs",
-              "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "D:\\QLCuaHang\\GUI\\Program.cs",
-              "RelativeToolTip": "GUI\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA8wA8AAAAoAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "frmNhanVien.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmNhanVien.cs",
+              "RelativeDocumentMoniker": "GUI\\frmNhanVien.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmNhanVien.cs [Design]",
+              "RelativeToolTip": "GUI\\frmNhanVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:18:12.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T16:31:13.99Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "frmPhieuNhap.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmPhieuNhap.cs",
+              "RelativeDocumentMoniker": "GUI\\frmPhieuNhap.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmPhieuNhap.cs [Design]",
+              "RelativeToolTip": "GUI\\frmPhieuNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T16:37:40.36Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmKhachHang.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmKhachHang.cs",
+              "RelativeDocumentMoniker": "GUI\\frmKhachHang.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmKhachHang.cs [Design]",
+              "RelativeToolTip": "GUI\\frmKhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:16:06.878Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "frmChucVu.cs [Design]",
               "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmChucVu.cs",
               "RelativeDocumentMoniker": "GUI\\frmChucVu.cs",
@@ -94,6 +204,160 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T14:16:47.23Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmSanPham.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmSanPham.cs",
+              "RelativeDocumentMoniker": "GUI\\frmSanPham.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmSanPham.cs [Design]",
+              "RelativeToolTip": "GUI\\frmSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T16:29:54.688Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmDonHang.cs [Design]",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmDonHang.cs",
+              "RelativeDocumentMoniker": "GUI\\frmDonHang.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmDonHang.cs [Design]",
+              "RelativeToolTip": "GUI\\frmDonHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:09:23.795Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmDonHang.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmDonHang.cs",
+              "RelativeDocumentMoniker": "GUI\\frmDonHang.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmDonHang.cs",
+              "RelativeToolTip": "GUI\\frmDonHang.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAArwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:20:35.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmDonHang.Designer.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmDonHang.Designer.cs",
+              "RelativeDocumentMoniker": "GUI\\frmDonHang.Designer.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmDonHang.Designer.cs",
+              "RelativeToolTip": "GUI\\frmDonHang.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:17:40.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmKhachHang.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmKhachHang.cs",
+              "RelativeDocumentMoniker": "GUI\\frmKhachHang.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmKhachHang.cs",
+              "RelativeToolTip": "GUI\\frmKhachHang.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAIAxwM8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:13:18.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmKhachHang.Designer.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmKhachHang.Designer.cs",
+              "RelativeDocumentMoniker": "GUI\\frmKhachHang.Designer.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmKhachHang.Designer.cs",
+              "RelativeToolTip": "GUI\\frmKhachHang.Designer.cs",
+              "ViewState": "AgIAAD4BAAAAAAAAAAArwE4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:13:59.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "NhanVienDTO.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\DTO\\NhanVienDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\NhanVienDTO.cs",
+              "ToolTip": "D:\\QLCuaHang\\DTO\\NhanVienDTO.cs",
+              "RelativeToolTip": "DTO\\NhanVienDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T03:31:30.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\Program.cs",
+              "RelativeDocumentMoniker": "GUI\\Program.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\Program.cs",
+              "RelativeToolTip": "GUI\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:18:12.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PhieuNhapDTO.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\DTO\\PhieuNhapDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\PhieuNhapDTO.cs",
+              "ToolTip": "D:\\QLCuaHang\\DTO\\PhieuNhapDTO.cs",
+              "RelativeToolTip": "DTO\\PhieuNhapDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T03:31:29.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmPhieuNhap.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmPhieuNhap.cs",
+              "RelativeDocumentMoniker": "GUI\\frmPhieuNhap.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmPhieuNhap.cs",
+              "RelativeToolTip": "GUI\\frmPhieuNhap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T03:31:04.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frmNhanVien.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\frmNhanVien.cs",
+              "RelativeDocumentMoniker": "GUI\\frmNhanVien.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\frmNhanVien.cs",
+              "RelativeToolTip": "GUI\\frmNhanVien.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAArwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T03:30:10.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DashboardForm.Designer.cs",
+              "DocumentMoniker": "D:\\QLCuaHang\\GUI\\DashboardForm.Designer.cs",
+              "RelativeDocumentMoniker": "GUI\\DashboardForm.Designer.cs",
+              "ToolTip": "D:\\QLCuaHang\\GUI\\DashboardForm.Designer.cs*",
+              "RelativeToolTip": "GUI\\DashboardForm.Designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:18:30.372Z",
+              "EditorCaption": ""
             }
           ]
         }

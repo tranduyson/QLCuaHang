@@ -202,5 +202,10 @@ namespace GUI
             // Kiểm tra là số và có độ dài hợp lệ
             return System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, @"^\d{9,11}$");
         }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
