@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmChiTietDonHang : Form
+    public partial class frmBaoCao : Form
     {
-        public frmChiTietDonHang()
+        public frmBaoCao()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

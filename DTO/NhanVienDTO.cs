@@ -19,11 +19,12 @@ namespace QLCuaHang.DTO
         public string TenCV { get; set; }
         public decimal LuongCoBan { get; set; }
         public DateTime NgayVaoLam { get; set; }
+        public string MatKhau { get; set; }
 
         public NhanVienDTO() { }
 
         public NhanVienDTO(string maNV, string hoTen, DateTime ngaySinh, string gioiTinh,
-            string diaChi, string sDT, string email, string maCV, string tenCV, decimal luongCoBan, DateTime ngayVaoLam)
+            string diaChi, string sDT, string email, string maCV, string tenCV, decimal luongCoBan, DateTime ngayVaoLam, string matKhau)
         {
             MaNV = maNV;
             HoTen = hoTen;
@@ -36,6 +37,7 @@ namespace QLCuaHang.DTO
             TenCV = tenCV;
             LuongCoBan = luongCoBan;
             NgayVaoLam = ngayVaoLam;
+            MatKhau = matKhau;
         }
     }
 }

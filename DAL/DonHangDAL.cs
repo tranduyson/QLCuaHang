@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using QLCuaHang.DTO;
 
 namespace QLCuaHang.DAL
@@ -154,5 +155,119 @@ namespace QLCuaHang.DAL
 
             return "DH001";
         }
+        public bool Update(DonHangDTO dh)
+        {
+            string query = "UPDATE DonHang SET NgayDH = @NgayDH, MaKH = @MaKH, MaNV = @MaNV, TongTien = @TongTien WHERE MaDH = @MaDH";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+        new SqlParameter("@MaDH", dh.MaDH),
+        new SqlParameter("@NgayDH", dh.NgayDH),
+        new SqlParameter("@MaKH", dh.MaKH),
+        new SqlParameter("@MaNV", dh.MaNV),
+        new SqlParameter("@TongTien", dh.TongTien),
+            };
+
+            return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
+        }
+        public List<DonHangDTO> SearchDonHangByMaDH(string maDH)
+        {
+            List<DonHangDTO> list = new List<DonHangDTO>();
+            string query = "SELECT * FROM DonHang WHERE MaDH LIKE N'%' + @MaDH + '%'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maDH });
+
+            foreach (DataRow row in data.Rows)
+            {
+                decimal tongTien = row["TongTien"] != DBNull.Value ? decimal.Parse(row["TongTien"].ToString()) : 0;
+
+                DonHangDTO dh = new DonHangDTO(
+                    row["MaDH"].ToString(),
+                    Convert.ToDateTime(row["NgayDH"]),
+                    row["MaKH"].ToString(),
+                    row["MaNV"].ToString(),
+                    row["TenNV"].ToString(),
+                    row["DiaChi"].ToString(),
+                    tongTien
+                );
+                list.Add(dh);
+            }
+            return list;
+        }
+
+
+        /// <summary>
+        /// Tìm kiếm hóa đơn
+        /// </summary>
+        /// <param name="maDH"></param>
+        /// <param name="fromDate"></param>
+        /// <param name="toDate"></param>
+        /// <param name="maNV"></param>
+        /// <param name="maKH"></param>
+        /// <returns></returns>
+        public List<DonHangDTO> SearchDonHang(string? maDH, DateTime? fromDate, DateTime? toDate, string? maNV, string? maKH)
+        {
+            List<DonHangDTO> list = new List<DonHangDTO>();
+
+            string query = "SELECT dh.*, kh.TenKH, nv.HoTen AS TenNV " +
+                           "FROM DonHang dh " +
+                           "JOIN KhachHang kh ON dh.MaKH = kh.MaKH " +
+                           "JOIN NhanVien nv ON dh.MaNV = nv.MaNV " +
+                           "WHERE 1 = 1";
+
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            if (!string.IsNullOrEmpty(maDH))
+            {
+                query += " AND dh.MaDH LIKE '%' + @MaDH + '%'";
+                parameters.Add(new SqlParameter("@MaDH", maDH));
+            }
+
+            if (fromDate.HasValue)
+            {
+                query += " AND dh.NgayDH >= @FromDate";
+                parameters.Add(new SqlParameter("@FromDate", fromDate.Value.Date)); // chỉ lấy phần ngày
+            }
+
+            if (toDate.HasValue)
+            {
+                query += " AND dh.NgayDH <= @ToDate";
+                parameters.Add(new SqlParameter("@ToDate", toDate.Value.Date.AddDays(1).AddTicks(-1))); // cuối ngày
+            }
+
+            if (!string.IsNullOrEmpty(maNV))
+            {
+                query += " AND dh.MaNV = @MaNV";
+                parameters.Add(new SqlParameter("@MaNV", maNV));
+            }
+
+            if (!string.IsNullOrEmpty(maKH))
+            {
+                query += " AND dh.MaKH = @MaKH";
+                parameters.Add(new SqlParameter("@MaKH", maKH));
+            }
+
+            DataTable data = DataProvider.Instance.ExecuteQueryWithParameters(query, parameters.ToArray());
+
+            foreach (DataRow row in data.Rows)
+            {
+                DonHangDTO dh = new DonHangDTO(
+                    row["MaDH"].ToString(),
+                    DateTime.Parse(row["NgayDH"].ToString()),
+                    row["MaKH"].ToString(),
+                    row["TenKH"].ToString(),
+                    row["MaNV"].ToString(),
+                    row["TenNV"].ToString(),
+                    decimal.Parse(row["TongTien"].ToString())
+                );
+
+                dh.DSChiTiet = GetChiTietDonHangByMaDH(dh.MaDH);
+                list.Add(dh);
+            }
+
+            return list;
+        }
+
+
+
     }
 }

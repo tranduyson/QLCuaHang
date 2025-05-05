@@ -31,16 +31,20 @@ namespace QLCuaHang.DAL
             return list;
         }
 
-        public bool Insert(SanPhamDTO sp)
+        public bool InsertSanPham(string maSP, string tenSP, string donVi, decimal giaBan, decimal giaNhap, int tonKho)
         {
-            string query = @"INSERT INTO SanPham (MaSP, TenSP, DonVi, GiaBan, GiaNhap, TonKho)
-                             VALUES (@MaSP, @TenSP, @DonVi, @GiaBan, @GiaNhap, @TonKho)";
-            object[] parameters = {
-                sp.MaSP, sp.TenSP, sp.DonVi, sp.GiaBan, sp.GiaNhap, sp.TonKho
-            };
+            string query = "INSERT INTO SanPham VALUES (@MaSP, @TenSP, @DonVi, @GiaBan, @GiaNhap, @TonKho)";
 
-            return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[]
+            {
+        maSP, tenSP, donVi, giaBan, giaNhap, tonKho
+            });
+
+            return result > 0;
         }
+
+
+
 
         public bool Update(SanPhamDTO sp)
         {
@@ -65,5 +69,71 @@ namespace QLCuaHang.DAL
 
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
+        public string GenerateNewMaSP()
+        {
+            string query = "SELECT TOP 1 MaSP FROM SanPham ORDER BY MaSP DESC";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            if (data.Rows.Count > 0)
+            {
+                string lstMaSP = data.Rows[0]["MaSP"].ToString();
+                int number = int.Parse(lstMaSP.Substring(2));
+                return "SP" + (number + 1).ToString("D3");
+            }
+
+            return "SP001";
+        }
+
+        public List<SanPhamDTO> SearchSanPhamByName(string name)
+        {
+            List<SanPhamDTO> list = new List<SanPhamDTO>();
+
+            string query = "SELECT * FROM SanPham WHERE TenSP LIKE N'%' + @TenSP + '%'";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { name });
+
+            foreach (DataRow row in data.Rows)
+            {
+                SanPhamDTO sp = new SanPhamDTO(
+                    row["MaSP"].ToString(),
+                    row["TenSP"].ToString(),
+                    row["DonVi"].ToString(),
+                    decimal.Parse(row["GiaBan"].ToString()),
+                    decimal.Parse(row["GiaNhap"].ToString()),
+                    int.Parse(row["TonKho"].ToString())
+                );
+
+                list.Add(sp);
+            }
+
+            return list;
+        }
+
+        public SanPhamDTO SearchSanPhamByMa(string maSP)
+        {
+            string query = "SELECT * FROM SanPham WHERE MaSP = @MaSP"; // Tìm theo mã sản phẩm chính xác
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maSP });
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0]; // Lấy dòng đầu tiên (nếu có)
+
+                SanPhamDTO sp = new SanPhamDTO(
+                    row["MaSP"].ToString(),
+                    row["TenSP"].ToString(),
+                    row["DonVi"].ToString(),
+                    decimal.Parse(row["GiaBan"].ToString()),
+                    decimal.Parse(row["GiaNhap"].ToString()),
+                    int.Parse(row["TonKho"].ToString())
+                );
+
+                return sp; // Trả về đối tượng SanPhamDTO
+            }
+
+            return null; // Nếu không tìm thấy, trả về null
+        }
+
+
     }
 }

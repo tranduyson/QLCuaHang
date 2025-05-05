@@ -132,7 +132,7 @@ namespace GUI
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            
+
             txtTimKiem.Text = "";
             ClearForm();
             LoadChucVu();
@@ -177,6 +177,11 @@ namespace GUI
         }
 
         private void dataGridViewChucVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

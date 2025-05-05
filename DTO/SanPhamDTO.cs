@@ -15,6 +15,7 @@ namespace QLCuaHang.DTO
         public decimal GiaNhap { get; set; }
         public int TonKho { get; set; }
 
+
         public SanPhamDTO() { }
 
         public SanPhamDTO(string maSP, string tenSP, string donVi, decimal giaBan, decimal giaNhap, int tonKho)

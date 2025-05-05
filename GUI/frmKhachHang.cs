@@ -207,5 +207,10 @@ namespace GUI
         {
 
         }
+
+        private void dataGridViewKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+        }
     }
 }

@@ -98,10 +98,6 @@ namespace GUI
             dataGridViewNhanVien.DataSource = nvBLL.SearchByName(keyword);
         }
 
-        private void dataGridViewNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void btnTimKiem_Click_1(object sender, EventArgs e)
         {
@@ -193,6 +189,7 @@ namespace GUI
                 if (row.Cells["MaCV"].Value != DBNull.Value)
                     cbChucVu.SelectedValue = row.Cells["MaCV"].Value;
             }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -233,6 +230,7 @@ namespace GUI
             txtEmail.Clear();
             txtSDT.Clear();
             richTextDiaChi.Clear();
+            txtMatKhau.Clear();
             numLuong.Value = 0;
             datNgaySinh.Format = DateTimePickerFormat.Custom;
             datNgaySinh.CustomFormat = " ";
@@ -274,7 +272,8 @@ namespace GUI
                 NgaySinh = datNgaySinh.Value,
                 NgayVaoLam = datNgayVaoLam.Value,
                 LuongCoBan = Convert.ToDecimal(numLuong.Value),
-                MaCV = cbChucVu.SelectedValue?.ToString()
+                MaCV = cbChucVu.SelectedValue?.ToString(),
+                MatKhau = txtMatKhau.Text.Trim(),
             };
 
             bool kq = nvBLL.Update(nv);
@@ -319,7 +318,8 @@ namespace GUI
                 NgaySinh = datNgaySinh.Value,
                 NgayVaoLam = datNgayVaoLam.Value,
                 LuongCoBan = Convert.ToDecimal(numLuong.Value),
-                MaCV = cbChucVu.SelectedValue?.ToString()
+                MaCV = cbChucVu.SelectedValue?.ToString(),
+                MatKhau = txtMatKhau.Text.Trim(),
             };
 
             bool kq = nvBLL.Add(nv);

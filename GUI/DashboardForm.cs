@@ -1,23 +1,32 @@
 ﻿using System;
 using System.Windows.Forms;
 using GUI;
+using QLCuaHang.DTO;
 
 namespace DashboardWinForm
 {
     public partial class frmDashboard : Form
     {
-        public frmDashboard()
+        private NhanVienDTO nhanVien;
+
+        public frmDashboard(NhanVienDTO nv)
         {
+            this.nhanVien = nv;
+
             InitializeComponent();
             LoadFormToTab(new frmNhanVien(), tabNhanVien);
             LoadFormToTab(new frmKhachHang(), tabKhachHang);
             LoadFormToTab(new frmChucVu(), tabChucVu);
             LoadFormToTab(new frmSanPham(), tabSanPham);
-            LoadFormToTab(new frmChiTietDonHang(), tabChiTietDonHang);
-            LoadFormToTab(new frmChiTietPhieuNhap(), tabChiTietNhap);
+
+
             LoadFormToTab(new frmDonHang(), tabDonHang);
             LoadFormToTab(new frmLuong(), tabLuong);
+            LoadFormToTab(new frmDanhSachDonHang(), tabDSDonHang);
             LoadFormToTab(new frmPhieuNhap(), tabPhieuNhap);
+            LoadFormToTab(new frmBaoCao(), tabBaoCao);
+
+            lblwellcome.Text = string.Format("Xin chào, {0}", nv.HoTen);
         }
         private void LoadFormToTab(Form form, TabPage tab)
         {
@@ -34,9 +43,11 @@ namespace DashboardWinForm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             tabControl1 = new TabControl();
             tabTongQuan = new TabPage();
-            button7 = new Button();
+            btnDangXuat = new Button();
+            lblwellcome = new Label();
+            button1 = new Button();
+            label1 = new Label();
             button8 = new Button();
-            button9 = new Button();
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
@@ -50,8 +61,8 @@ namespace DashboardWinForm
             tabSanPham = new TabPage();
             tabLuong = new TabPage();
             tabPhieuNhap = new TabPage();
-            tabChiTietNhap = new TabPage();
-            tabChiTietDonHang = new TabPage();
+            tabDSDonHang = new TabPage();
+            tabBaoCao = new TabPage();
             tabControl1.SuspendLayout();
             tabTongQuan.SuspendLayout();
             SuspendLayout();
@@ -66,20 +77,24 @@ namespace DashboardWinForm
             tabControl1.Controls.Add(tabSanPham);
             tabControl1.Controls.Add(tabLuong);
             tabControl1.Controls.Add(tabPhieuNhap);
-            tabControl1.Controls.Add(tabChiTietNhap);
-            tabControl1.Controls.Add(tabChiTietDonHang);
+            tabControl1.Controls.Add(tabDSDonHang);
+            tabControl1.Controls.Add(tabBaoCao);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1299, 679);
+            tabControl1.Size = new Size(1301, 640);
             tabControl1.TabIndex = 0;
             // 
             // tabTongQuan
             // 
-            tabTongQuan.Controls.Add(button7);
+            tabTongQuan.BackColor = Color.White;
+            tabTongQuan.BackgroundImage = (Image)resources.GetObject("tabTongQuan.BackgroundImage");
+            tabTongQuan.Controls.Add(btnDangXuat);
+            tabTongQuan.Controls.Add(lblwellcome);
+            tabTongQuan.Controls.Add(button1);
+            tabTongQuan.Controls.Add(label1);
             tabTongQuan.Controls.Add(button8);
-            tabTongQuan.Controls.Add(button9);
             tabTongQuan.Controls.Add(button4);
             tabTongQuan.Controls.Add(button5);
             tabTongQuan.Controls.Add(button6);
@@ -87,35 +102,82 @@ namespace DashboardWinForm
             tabTongQuan.Controls.Add(btnNhanVien);
             tabTongQuan.Controls.Add(btnDonHang);
             tabTongQuan.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tabTongQuan.ForeColor = Color.Blue;
+            tabTongQuan.ForeColor = Color.DodgerBlue;
             tabTongQuan.Location = new Point(4, 29);
             tabTongQuan.Name = "tabTongQuan";
             tabTongQuan.Padding = new Padding(3);
-            tabTongQuan.Size = new Size(1291, 646);
+            tabTongQuan.Size = new Size(1293, 607);
             tabTongQuan.TabIndex = 0;
             tabTongQuan.Text = "🏠 Tổng quan";
-            tabTongQuan.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnDangXuat
             // 
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.TopCenter;
-            button7.Location = new Point(894, 473);
-            button7.Name = "button7";
-            button7.Size = new Size(142, 134);
-            button7.TabIndex = 8;
-            button7.Text = "Chi tiết phiếu nhập";
-            button7.TextAlign = ContentAlignment.BottomCenter;
-            button7.TextImageRelation = TextImageRelation.ImageAboveText;
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            btnDangXuat.BackgroundImage = (Image)resources.GetObject("btnDangXuat.BackgroundImage");
+            btnDangXuat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDangXuat.ForeColor = Color.Black;
+            btnDangXuat.Image = (Image)resources.GetObject("btnDangXuat.Image");
+            btnDangXuat.ImageAlign = ContentAlignment.TopCenter;
+            btnDangXuat.Location = new Point(1153, 6);
+            btnDangXuat.Name = "btnDangXuat";
+            btnDangXuat.Size = new Size(98, 91);
+            btnDangXuat.TabIndex = 12;
+            btnDangXuat.Text = "Đăng xuất";
+            btnDangXuat.TextAlign = ContentAlignment.BottomCenter;
+            btnDangXuat.UseVisualStyleBackColor = true;
+            btnDangXuat.Click += btnDangXuat_Click;
+            // 
+            // lblwellcome
+            // 
+            lblwellcome.AutoSize = true;
+            lblwellcome.BackColor = Color.White;
+            lblwellcome.BorderStyle = BorderStyle.FixedSingle;
+            lblwellcome.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblwellcome.ForeColor = Color.Black;
+            lblwellcome.Image = (Image)resources.GetObject("lblwellcome.Image");
+            lblwellcome.Location = new Point(875, 54);
+            lblwellcome.Name = "lblwellcome";
+            lblwellcome.Size = new Size(21, 33);
+            lblwellcome.TabIndex = 10;
+            lblwellcome.Text = ".";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.MistyRose;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.BottomCenter;
+            button1.Location = new Point(957, 103);
+            button1.Name = "button1";
+            button1.RightToLeft = RightToLeft.No;
+            button1.Size = new Size(142, 134);
+            button1.TabIndex = 9;
+            button1.Text = "DS Đơn hàng";
+            button1.TextImageRelation = TextImageRelation.ImageAboveText;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Snap ITC", 25.8000011F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.Location = new Point(118, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(346, 57);
+            label1.TabIndex = 8;
+            label1.Text = "TỔNG QUAN";
             // 
             // button8
             // 
+            button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
             button8.DialogResult = DialogResult.Abort;
+            button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.Black;
             button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.ImageAlign = ContentAlignment.TopCenter;
-            button8.Location = new Point(582, 473);
+            button8.ImageAlign = ContentAlignment.BottomCenter;
+            button8.Location = new Point(552, 457);
             button8.Name = "button8";
             button8.Size = new Size(142, 134);
             button8.TabIndex = 7;
@@ -124,55 +186,48 @@ namespace DashboardWinForm
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
-            // button9
-            // 
-            button9.Image = (Image)resources.GetObject("button9.Image");
-            button9.ImageAlign = ContentAlignment.TopCenter;
-            button9.Location = new Point(273, 473);
-            button9.Name = "button9";
-            button9.Size = new Size(142, 134);
-            button9.TabIndex = 6;
-            button9.Text = "Chi tiết đơn hàng";
-            button9.TextAlign = ContentAlignment.BottomCenter;
-            button9.TextImageRelation = TextImageRelation.ImageAboveText;
-            button9.UseVisualStyleBackColor = true;
-            button9.Click += button9_Click;
-            // 
             // button4
             // 
+            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
+            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.Black;
             button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.TopCenter;
-            button4.Location = new Point(894, 265);
+            button4.ImageAlign = ContentAlignment.BottomCenter;
+            button4.Location = new Point(957, 284);
             button4.Name = "button4";
             button4.Size = new Size(142, 134);
             button4.TabIndex = 5;
             button4.Text = "Lương";
-            button4.TextAlign = ContentAlignment.BottomCenter;
             button4.TextImageRelation = TextImageRelation.ImageAboveText;
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
             // button5
             // 
+            button5.BackColor = Color.MistyRose;
+            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
+            button5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.Black;
             button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.TopCenter;
-            button5.Location = new Point(582, 265);
+            button5.ImageAlign = ContentAlignment.BottomCenter;
+            button5.Location = new Point(552, 103);
             button5.Name = "button5";
             button5.Size = new Size(142, 134);
             button5.TabIndex = 4;
             button5.Text = "Sản phẩm";
-            button5.TextAlign = ContentAlignment.BottomCenter;
             button5.TextImageRelation = TextImageRelation.ImageAboveText;
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
             // button6
             // 
+            button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
+            button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.Black;
             button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.TopCenter;
-            button6.Location = new Point(273, 265);
+            button6.Location = new Point(552, 285);
             button6.Name = "button6";
-            button6.Size = new Size(142, 134);
+            button6.Size = new Size(142, 133);
             button6.TabIndex = 3;
             button6.Text = "Khách hàng";
             button6.TextAlign = ContentAlignment.BottomCenter;
@@ -182,24 +237,28 @@ namespace DashboardWinForm
             // 
             // button3
             // 
+            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
+            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.Black;
             button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.TopCenter;
-            button3.Location = new Point(894, 55);
+            button3.ImageAlign = ContentAlignment.BottomCenter;
+            button3.Location = new Point(754, 457);
             button3.Name = "button3";
             button3.Size = new Size(142, 134);
             button3.TabIndex = 2;
             button3.Text = "Chức vụ";
-            button3.TextAlign = ContentAlignment.BottomCenter;
             button3.TextImageRelation = TextImageRelation.ImageAboveText;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
             // btnNhanVien
             // 
+            btnNhanVien.BackgroundImage = (Image)resources.GetObject("btnNhanVien.BackgroundImage");
             btnNhanVien.DialogResult = DialogResult.Abort;
+            btnNhanVien.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNhanVien.ForeColor = Color.Black;
             btnNhanVien.Image = (Image)resources.GetObject("btnNhanVien.Image");
-            btnNhanVien.ImageAlign = ContentAlignment.TopCenter;
-            btnNhanVien.Location = new Point(582, 55);
+            btnNhanVien.Location = new Point(957, 457);
             btnNhanVien.Name = "btnNhanVien";
             btnNhanVien.Size = new Size(142, 134);
             btnNhanVien.TabIndex = 1;
@@ -210,109 +269,117 @@ namespace DashboardWinForm
             // 
             // btnDonHang
             // 
+            btnDonHang.BackColor = Color.MistyRose;
+            btnDonHang.BackgroundImage = (Image)resources.GetObject("btnDonHang.BackgroundImage");
+            btnDonHang.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDonHang.ForeColor = Color.Black;
             btnDonHang.Image = (Image)resources.GetObject("btnDonHang.Image");
-            btnDonHang.ImageAlign = ContentAlignment.TopCenter;
-            btnDonHang.Location = new Point(273, 55);
+            btnDonHang.ImageAlign = ContentAlignment.BottomCenter;
+            btnDonHang.Location = new Point(754, 103);
             btnDonHang.Name = "btnDonHang";
+            btnDonHang.RightToLeft = RightToLeft.No;
             btnDonHang.Size = new Size(142, 134);
             btnDonHang.TabIndex = 0;
-            btnDonHang.Text = "Đơn hàng";
-            btnDonHang.TextAlign = ContentAlignment.BottomCenter;
+            btnDonHang.Text = "Tạo đơn hàng";
             btnDonHang.TextImageRelation = TextImageRelation.ImageAboveText;
             btnDonHang.UseVisualStyleBackColor = true;
             btnDonHang.Click += btnDonHang_Click;
             // 
             // tabDonHang
             // 
+            tabDonHang.BackColor = Color.MistyRose;
             tabDonHang.Location = new Point(4, 29);
             tabDonHang.Name = "tabDonHang";
             tabDonHang.Padding = new Padding(3);
-            tabDonHang.Size = new Size(1291, 646);
+            tabDonHang.Size = new Size(1293, 607);
             tabDonHang.TabIndex = 3;
-            tabDonHang.Text = "\U0001f9fe Đơn hàng";
-            tabDonHang.UseVisualStyleBackColor = true;
+            tabDonHang.Text = "\U0001f9fe Tạo đơn hàng";
             // 
             // tabKhachHang
             // 
+            tabKhachHang.BackColor = Color.MistyRose;
             tabKhachHang.Location = new Point(4, 29);
             tabKhachHang.Name = "tabKhachHang";
             tabKhachHang.Padding = new Padding(3);
-            tabKhachHang.Size = new Size(1291, 646);
+            tabKhachHang.Size = new Size(1293, 607);
             tabKhachHang.TabIndex = 1;
             tabKhachHang.Text = "👥 Khách hàng";
-            tabKhachHang.UseVisualStyleBackColor = true;
             // 
             // tabNhanVien
             // 
+            tabNhanVien.BackColor = Color.MistyRose;
             tabNhanVien.Location = new Point(4, 29);
             tabNhanVien.Name = "tabNhanVien";
             tabNhanVien.Padding = new Padding(3);
-            tabNhanVien.Size = new Size(1291, 646);
+            tabNhanVien.Size = new Size(1293, 607);
             tabNhanVien.TabIndex = 2;
             tabNhanVien.Text = "👤 nhân viên";
-            tabNhanVien.UseVisualStyleBackColor = true;
             // 
             // tabChucVu
             // 
+            tabChucVu.BackColor = Color.MistyRose;
             tabChucVu.Location = new Point(4, 29);
             tabChucVu.Name = "tabChucVu";
-            tabChucVu.Size = new Size(1291, 646);
+            tabChucVu.Size = new Size(1293, 607);
             tabChucVu.TabIndex = 4;
             tabChucVu.Text = "\U0001f9d1‍💼 Chức vụ";
-            tabChucVu.UseVisualStyleBackColor = true;
             // 
             // tabSanPham
             // 
+            tabSanPham.BackColor = Color.MistyRose;
             tabSanPham.Location = new Point(4, 29);
             tabSanPham.Name = "tabSanPham";
-            tabSanPham.Size = new Size(1291, 646);
+            tabSanPham.Size = new Size(1293, 607);
             tabSanPham.TabIndex = 5;
             tabSanPham.Text = "📦 Sản phẩm";
-            tabSanPham.UseVisualStyleBackColor = true;
             // 
             // tabLuong
             // 
+            tabLuong.BackColor = Color.MistyRose;
             tabLuong.Location = new Point(4, 29);
             tabLuong.Name = "tabLuong";
-            tabLuong.Size = new Size(1291, 646);
+            tabLuong.Size = new Size(1293, 607);
             tabLuong.TabIndex = 6;
             tabLuong.Text = "💰 Lương";
-            tabLuong.UseVisualStyleBackColor = true;
             // 
             // tabPhieuNhap
             // 
+            tabPhieuNhap.BackColor = Color.MistyRose;
             tabPhieuNhap.Location = new Point(4, 29);
             tabPhieuNhap.Name = "tabPhieuNhap";
-            tabPhieuNhap.Size = new Size(1291, 646);
+            tabPhieuNhap.Size = new Size(1293, 607);
             tabPhieuNhap.TabIndex = 7;
             tabPhieuNhap.Text = "📥 Phiếu nhập";
-            tabPhieuNhap.UseVisualStyleBackColor = true;
             // 
-            // tabChiTietNhap
+            // tabDSDonHang
             // 
-            tabChiTietNhap.Location = new Point(4, 29);
-            tabChiTietNhap.Name = "tabChiTietNhap";
-            tabChiTietNhap.Size = new Size(1291, 646);
-            tabChiTietNhap.TabIndex = 8;
-            tabChiTietNhap.Text = "📋 Chi tiết phiếu nhập";
-            tabChiTietNhap.UseVisualStyleBackColor = true;
+            tabDSDonHang.Location = new Point(4, 29);
+            tabDSDonHang.Name = "tabDSDonHang";
+            tabDSDonHang.Size = new Size(1293, 607);
+            tabDSDonHang.TabIndex = 8;
+            tabDSDonHang.Text = "DS Đơn Hàng";
+            tabDSDonHang.UseVisualStyleBackColor = true;
             // 
-            // tabChiTietDonHang
+            // tabBaoCao
             // 
-            tabChiTietDonHang.Location = new Point(4, 29);
-            tabChiTietDonHang.Name = "tabChiTietDonHang";
-            tabChiTietDonHang.Size = new Size(1291, 646);
-            tabChiTietDonHang.TabIndex = 9;
-            tabChiTietDonHang.Text = "📄 Chi tiết đơn hàng";
-            tabChiTietDonHang.UseVisualStyleBackColor = true;
+            tabBaoCao.Location = new Point(4, 29);
+            tabBaoCao.Name = "tabBaoCao";
+            tabBaoCao.Size = new Size(1293, 607);
+            tabBaoCao.TabIndex = 9;
+            tabBaoCao.Text = "Báo cáo";
+            tabBaoCao.UseVisualStyleBackColor = true;
             // 
             // frmDashboard
             // 
-            ClientSize = new Size(1299, 679);
+            ClientSize = new Size(1301, 640);
             Controls.Add(tabControl1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "QUẢN LÝ CỬA HÀNG MINI";
             tabControl1.ResumeLayout(false);
             tabTongQuan.ResumeLayout(false);
+            tabTongQuan.PerformLayout();
             ResumeLayout(false);
 
         }
@@ -329,13 +396,10 @@ namespace DashboardWinForm
         private Button button6;
         private Button button3;
         private Button btnNhanVien;
-        private Button button7;
         private Button button8;
-        private Button button9;
         private TabPage tabLuong;
+        private TabPage tabDSDonHang;
         private TabPage tabPhieuNhap;
-        private TabPage tabChiTietNhap;
-        private TabPage tabChiTietDonHang;
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
@@ -367,19 +431,29 @@ namespace DashboardWinForm
             tabControl1.SelectedTab = tabLuong;
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabChiTietDonHang;
-        }
-
         private void button8_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabPhieuNhap;
         }
+        private Label label1;
+        private Button button1;
+        private Label lblwellcome;
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabChiTietNhap;
+            // Xóa thông tin đăng nhập
+            GUI.Properties.Settings.Default.LoggedInMaNV = string.Empty;
+            GUI.Properties.Settings.Default.Save();
+
+            frmDangNhap loginForm = new frmDangNhap();
+            this.Close();
         }
+        private Button btnDangXuat;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabDSDonHang;
+        }
+        private TabPage tabBaoCao;
     }
 }

@@ -8,6 +8,7 @@ D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
 D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
 D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
 D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.sourcelink.json
 D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.csproj.Up2Date
 D:\QLCuaHang\DAL\obj\Debug\net8.0\DAL.dll
 D:\QLCuaHang\DAL\obj\Debug\net8.0\refint\DAL.dll

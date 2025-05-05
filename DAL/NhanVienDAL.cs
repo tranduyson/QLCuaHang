@@ -43,7 +43,8 @@ namespace QLCuaHang.DAL
                     row["MaCV"].ToString(),
                     row["TenCV"].ToString(),
                     decimal.Parse(row["LuongCoBan"].ToString()),
-                    DateTime.Parse(row["NgayVaoLam"].ToString())
+                    DateTime.Parse(row["NgayVaoLam"].ToString()),
+                    row["MatKhau"].ToString()
                 );
                 list.Add(nv);
             }
@@ -77,7 +78,8 @@ namespace QLCuaHang.DAL
                     row["MaCV"].ToString(),
                     row["TenCV"].ToString(),
                     decimal.Parse(row["LuongCoBan"].ToString()),
-                    DateTime.Parse(row["NgayVaoLam"].ToString())
+                    DateTime.Parse(row["NgayVaoLam"].ToString()),
+                    row["MatKhau"].ToString()
                 );
 
                 list.Add(nv);
@@ -111,7 +113,8 @@ namespace QLCuaHang.DAL
                     row["MaCV"].ToString(),
                     row["TenCV"].ToString(),
                     decimal.Parse(row["LuongCoBan"].ToString()),
-                    DateTime.Parse(row["NgayVaoLam"].ToString())
+                    DateTime.Parse(row["NgayVaoLam"].ToString()),
+                    row["MatKhau"].ToString()
                 );
             }
 
@@ -133,12 +136,12 @@ namespace QLCuaHang.DAL
         /// <param name="ngayVaoLam"></param>
         /// <returns></returns>
         public bool InsertNhanVien(string maNV, string hoTen, DateTime ngaySinh, string gioiTinh,
-            string diaChi, string sdt, string email, string maCV, decimal luongCoBan, DateTime ngayVaoLam)
+            string diaChi, string sdt, string email, string maCV, decimal luongCoBan, DateTime ngayVaoLam, string matkhau)
         {
-            string query = "INSERT INTO NhanVien VALUES ( @MaNV , @HoTen , @NgaySinh , @GioiTinh , @DiaChi , @SDT , @Email , @MaCV , @LuongCoBan , @NgayVaoLam )";
+            string query = "INSERT INTO NhanVien VALUES ( @MaNV , @HoTen , @NgaySinh , @GioiTinh , @DiaChi , @SDT , @Email , @MaCV , @LuongCoBan , @NgayVaoLam,@MatKhau )";
             
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] {
-                maNV, hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, maCV, luongCoBan, ngayVaoLam
+                maNV, hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, maCV, luongCoBan, ngayVaoLam,matkhau
             });
             return result > 0;
         }
@@ -158,12 +161,12 @@ namespace QLCuaHang.DAL
         /// <param name="ngayVaoLam"></param>
         /// <returns></returns>
         public bool UpdateNhanVien(string maNV, string hoTen, DateTime ngaySinh, string gioiTinh,
-            string diaChi, string sdt, string email, string maCV, decimal luongCoBan, DateTime ngayVaoLam)
+            string diaChi, string sdt, string email, string maCV, decimal luongCoBan, DateTime ngayVaoLam, string matKhau)
         {
             string query = "UPDATE NhanVien SET HoTen = @HoTen , NgaySinh = @NgaySinh , GioiTinh = @GioiTinh , DiaChi = @DiaChi , " +
-                "SDT = @SDT , Email = @Email , MaCV = @MaCV , LuongCoBan = @LuongCoBan , NgayVaoLam = @NgayVaoLam WHERE MaNV = @MaNV";
+                "SDT = @SDT , Email = @Email , MaCV = @MaCV , LuongCoBan = @LuongCoBan , NgayVaoLam = @NgayVaoLam, MatKhau = @MatKhau WHERE MaNV = @MaNV";
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] {
-                hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, maCV, luongCoBan, ngayVaoLam, maNV
+                hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, maCV, luongCoBan, ngayVaoLam,matKhau,maNV
             });
             return result > 0;
         }
@@ -196,6 +199,13 @@ namespace QLCuaHang.DAL
             }
 
             return "NV001";
+        }
+
+        public bool DangNhap(string maNV, string matKhauMD5)
+        {
+            string query = "SELECT COUNT(*) FROM NhanVien WHERE MaNV = @MaNV AND MatKhau = @MatKhau";
+            object result = DataProvider.Instance.ExecuteScalar(query, new object[] { maNV, matKhauMD5 });
+            return Convert.ToInt32(result) > 0;
         }
     }
 }

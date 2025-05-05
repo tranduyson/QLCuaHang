@@ -68,6 +68,52 @@ namespace QLCuaHang.DAL
             return list;
         }
 
+        // Tìm kiếm khách hàng theo số điện thoại
+        public List<KhachHangDTO> SearchKhachHangByPhone(string phone)
+        {
+            List<KhachHangDTO> list = new List<KhachHangDTO>();
+
+            string query = "SELECT * FROM KhachHang WHERE SDT LIKE '%' + @SDT + '%'";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { phone });
+
+            foreach (DataRow row in data.Rows)
+            {
+                KhachHangDTO kh = new KhachHangDTO(
+                    row["MaKH"].ToString(),
+                    row["TenKH"].ToString(),
+                    row["SDT"].ToString(),
+                    row["DiaChi"].ToString(),
+                    row["Email"].ToString()
+                );
+                list.Add(kh);
+            }
+
+            return list;
+        }
+
+        // Lấy khách hàng theo số điện thoại chính xác
+        public KhachHangDTO GetKhachHangByPhone(string phone)
+        {
+            string query = "SELECT * FROM KhachHang WHERE SDT = @SDT";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { phone });
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                return new KhachHangDTO(
+                    row["MaKH"].ToString(),
+                    row["TenKH"].ToString(),
+                    row["SDT"].ToString(),
+                    row["DiaChi"].ToString(),
+                    row["Email"].ToString()
+                );
+            }
+
+            return null;
+        }
+
         public KhachHangDTO GetKhachHangByMa(string maKH)
         {
             string query = "SELECT * FROM KhachHang WHERE MaKH = @MaKH";
@@ -89,17 +135,17 @@ namespace QLCuaHang.DAL
             return null;
         }
 
-        public bool InsertKhachHang(string maKH, string tenKH, string sdt, string diaChi, string email)
+        public bool InsertKhachHang(string maKH, string tenKH, string sdt, string diaChi, string email = null)
         {
             string query = "INSERT INTO KhachHang VALUES ( @MaKH , @TenKH , @SDT , @DiaChi , @Email )";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { maKH, tenKH, sdt, diaChi, email });
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { maKH, tenKH, sdt, diaChi, (object)email ?? DBNull.Value });
             return result > 0;
         }
 
-        public bool UpdateKhachHang(string maKH, string tenKH, string sdt, string diaChi, string email)
+        public bool UpdateKhachHang(string maKH, string tenKH, string sdt, string diaChi, string email = null)
         {
             string query = "UPDATE KhachHang SET TenKH = @TenKH , SDT = @SDT , DiaChi = @DiaChi , Email = @Email WHERE MaKH = @MaKH";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { tenKH, sdt, diaChi, email, maKH });
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { tenKH, sdt, diaChi, (object)email ?? DBNull.Value, maKH });
             return result > 0;
         }
 

@@ -1,4 +1,6 @@
 using DashboardWinForm;
+using QLCuaHang.BLL;
+using QLCuaHang.DTO;
 
 namespace GUI
 {
@@ -10,10 +12,20 @@ namespace GUI
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new frmDashboard());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            string maNV = Properties.Settings.Default.LoggedInMaNV;
+            if (!string.IsNullOrEmpty(maNV))
+            {
+                NhanVienDTO nv = new NhanVienBLL().GetByMaNV(maNV);
+                Application.Run(new frmDashboard(nv));
+            }
+            else
+            {
+                Application.Run(new frmDangNhap());
+            }
         }
+
     }
 }

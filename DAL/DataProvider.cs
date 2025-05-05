@@ -60,6 +60,32 @@ namespace QLCuaHang.DAL
             return data;
         }
 
+        // Hàm này sẽ thực thi các truy vấn với SqlParameter[]
+        public  DataTable ExecuteQueryWithParameters(string query, SqlParameter[] parameters = null)
+        {
+            DataTable data = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (parameters != null)
+                        command.Parameters.AddRange(parameters); // Thêm các tham số vào command
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(data);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return data;
+        }
+
         public int ExecuteNonQuery(string query, object[] parameters = null)
         {
             int data = 0;
@@ -68,29 +94,30 @@ namespace QLCuaHang.DAL
             {
                 connection.Open();
 
-                SqlCommand command = new SqlCommand(query, connection);
-
-                if (parameters != null)
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    if (parameters != null)
                     {
-                        if (item.Contains('@'))
+                        // Tìm tất cả tham số có dạng @TenParam bằng regex
+                        var matches = System.Text.RegularExpressions.Regex.Matches(query, @"@\w+");
+                        int i = 0;
+                        foreach (System.Text.RegularExpressions.Match match in matches)
                         {
-                            command.Parameters.AddWithValue(item, parameters[i]);
+                            if (i >= parameters.Length) break; // tránh lỗi nếu thiếu tham số
+                            command.Parameters.AddWithValue(match.Value, parameters[i]);
                             i++;
                         }
                     }
-                }
 
-                data = command.ExecuteNonQuery();
+                    data = command.ExecuteNonQuery();
+                }
 
                 connection.Close();
             }
 
             return data;
         }
+
 
         public object ExecuteScalar(string query, object[] parameters = null)
         {

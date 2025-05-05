@@ -1,3 +1,9 @@
+D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
+D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.AssemblyInfoInputs.cache
+D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.cs
+D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.csproj.CoreCompileInputs.cache
+D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.sourcelink.json
 D:\QLCuaHang\BLL\bin\Debug\net8.0\BLL.deps.json
 D:\QLCuaHang\BLL\bin\Debug\net8.0\BLL.dll
 D:\QLCuaHang\BLL\bin\Debug\net8.0\BLL.pdb
@@ -5,11 +11,6 @@ D:\QLCuaHang\BLL\bin\Debug\net8.0\DAL.dll
 D:\QLCuaHang\BLL\bin\Debug\net8.0\DTO.dll
 D:\QLCuaHang\BLL\bin\Debug\net8.0\DAL.pdb
 D:\QLCuaHang\BLL\bin\Debug\net8.0\DTO.pdb
-D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
-D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
-D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.AssemblyInfoInputs.cache
-D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.cs
-D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.csproj.CoreCompileInputs.cache
 D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.csproj.Up2Date
 D:\QLCuaHang\BLL\obj\Debug\net8.0\BLL.dll
 D:\QLCuaHang\BLL\obj\Debug\net8.0\refint\BLL.dll

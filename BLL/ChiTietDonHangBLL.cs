@@ -13,5 +13,13 @@ namespace QLCuaHang.BLL
         public bool Add(ChiTietDonHangDTO ct) => dal.Insert(ct);
 
         public bool DeleteByMaDH(string maDH) => dal.DeleteByMaDH(maDH);
+
+        public bool InsertChiTietDonHang(string maDH, string maSP, int soLuong, decimal donGia)
+        {
+            decimal thanhTien = soLuong * donGia;
+
+            return dal.InsertChiTietDonHang(maDH, maSP, soLuong, donGia, thanhTien);
+        }
+
     }
 }

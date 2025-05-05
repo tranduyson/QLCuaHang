@@ -34,4 +34,5 @@ namespace QLCuaHang.DTO
             DSChiTiet = new List<ChiTietDonHangDTO>();
         }
     }
+
 }

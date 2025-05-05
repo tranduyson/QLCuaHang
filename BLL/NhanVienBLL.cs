@@ -27,13 +27,26 @@ namespace QLCuaHang.BLL
         public bool Add(NhanVienDTO nv)
         {
             return dal.InsertNhanVien(nv.MaNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.DiaChi,
-                                      nv.SDT, nv.Email, nv.MaCV, nv.LuongCoBan, nv.NgayVaoLam);
+                                      nv.SDT, nv.Email, nv.MaCV, nv.LuongCoBan, nv.NgayVaoLam, MD5Helper.Encrypt(nv.MatKhau));
         }
 
+        /// <summary>
+        /// Cập nhật nhân viên
+        /// </summary>
+        /// <param name="nv"></param>
+        /// <returns></returns>
         public bool Update(NhanVienDTO nv)
         {
+            var nhanvien = dal.GetNhanVienByMa(nv.MaNV);
+            var matkhau = nhanvien.MatKhau;
+            //nếu mật khẩu không để trống thì không cập nhật mật khẩu
+            if (nv.MatKhau != null  && nv.MatKhau != "")
+            {
+                matkhau = MD5Helper.Encrypt(nv.MatKhau);
+            }
+
             return dal.UpdateNhanVien(nv.MaNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.DiaChi,
-                                      nv.SDT, nv.Email, nv.MaCV, nv.LuongCoBan, nv.NgayVaoLam);
+                                      nv.SDT, nv.Email, nv.MaCV, nv.LuongCoBan, nv.NgayVaoLam, matkhau);
         }
 
         public bool Delete(string maNV)
@@ -45,5 +58,18 @@ namespace QLCuaHang.BLL
         {
             return dal.GenerateNewMaNV();
         }
+
+        /// <summary>
+        /// Xử lý đăng nhập
+        /// </summary>
+        /// <param name="maNV"></param>
+        /// <param name="matKhau"></param>
+        /// <returns></returns>
+        public bool DangNhap(string maNV, string matKhau)
+        {
+            string matKhauMD5 = MD5Helper.Encrypt(matKhau);
+            return dal.DangNhap(maNV, matKhauMD5);
+        }
+
     }
 }

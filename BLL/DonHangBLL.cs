@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using QLCuaHang.DAL;
 using QLCuaHang.DTO;
 
@@ -22,20 +23,30 @@ namespace QLCuaHang.BLL
         }
 
         // Thêm đơn hàng mới
-        public bool Add(DonHangDTO dh)
+        public bool Add(DonHangDTO dh, out string outmess)
         {
+            outmess = string.Empty;
+
             // Thêm đơn hàng chính
             bool isSuccess = dal.InsertDonHang(dh.MaDH, dh.NgayDH, dh.MaKH, dh.MaNV, dh.TongTien);
-
-            if (!isSuccess) return false;
+            if (!isSuccess)
+            {
+                outmess = "Thêm đơn hàng thất bại.";
+                return false;
+            }
 
             // Thêm từng dòng chi tiết
             foreach (var ct in dh.DSChiTiet)
             {
                 bool result = dal.InsertChiTietDonHang(ct.MaDH, ct.MaSP, ct.SoLuong, ct.DonGia, ct.ThanhTien);
-                if (!result) return false;
+                if (!result)
+                {
+                    outmess = $"Thêm chi tiết đơn hàng cho sản phẩm {ct.MaSP} thất bại.";
+                    return false;
+                }
             }
 
+            outmess = "Thêm đơn hàng thành công.";
             return true;
         }
 
@@ -50,5 +61,19 @@ namespace QLCuaHang.BLL
         {
             return dal.GenerateNewMaDH();
         }
+        public bool Update(DonHangDTO dh)
+        {
+            return DonHangDAL.Instance.Update(dh); // Giả sử DAL có hàm Update
+        }
+        public List<DonHangDTO> SearchByName(string name)
+        {
+            return dal.SearchDonHangByMaDH(name);
+        }
+
+        public List<DonHangDTO> SearchDonHang(string? maDH, DateTime? fromDate, DateTime? toDate, string? maNV, string? maKH)
+        {
+            return dal.SearchDonHang(maDH, fromDate, toDate, maNV, maKH);
+        }
+
     }
 }

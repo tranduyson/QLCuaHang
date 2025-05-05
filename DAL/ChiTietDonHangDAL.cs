@@ -54,6 +54,19 @@ namespace QLCuaHang.DAL
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
 
+        public bool InsertChiTietDonHang(string maDH, string maSP, int soLuong, decimal donGia, decimal thanhTien)
+        {
+            string query = "INSERT INTO ChiTietDonHang (MaDH, MaSP, SoLuong, DonGia, ThanhTien) " +
+                           "VALUES (@MaDH, @MaSP, @SoLuong, @DonGia, @ThanhTien)";
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[]
+            {
+        maDH, maSP, soLuong, donGia, thanhTien
+            });
+
+            return result > 0;
+        }
+
         // Xóa tất cả chi tiết theo mã đơn hàng (nếu cần)
         public bool DeleteByMaDH(string maDH)
         {
