@@ -30,6 +30,7 @@ namespace GUI
             datNgayVaoLam.Format = DateTimePickerFormat.Custom;
             datNgayVaoLam.CustomFormat = "dd/MM/yyyy";
 
+
             radNam.Checked = true;
 
 
@@ -366,6 +367,11 @@ namespace GUI
                 // Gọi hàm tìm kiếm ở đây
                 LoadNhanVien();
             }
+        }
+
+        private void datNgayVaoLam_ValueChanged_1(object sender, EventArgs e)
+        {
+            datNgayVaoLam.Format = DateTimePickerFormat.Short;
         }
     }
 }

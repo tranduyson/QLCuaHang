@@ -274,6 +274,10 @@
               "target": "Package",
               "version": "[2025.2.0, )"
             },
+            "FastReport.OpenSource": {
+              "target": "Package",
+              "version": "[2025.2.0, )"
+            },
             "MaterialSkin.2": {
               "target": "Package",
               "version": "[2.3.1, )"

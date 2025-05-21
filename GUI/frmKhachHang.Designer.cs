@@ -52,7 +52,7 @@
             // 
             // txtTenKH
             // 
-            txtTenKH.Location = new Point(189, 166);
+            txtTenKH.Location = new Point(294, 238);
             txtTenKH.Margin = new Padding(3, 4, 3, 4);
             txtTenKH.Name = "txtTenKH";
             txtTenKH.Size = new Size(309, 27);
@@ -63,7 +63,7 @@
             lblTenKH.BorderStyle = BorderStyle.FixedSingle;
             lblTenKH.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblTenKH.ForeColor = SystemColors.ActiveCaptionText;
-            lblTenKH.Location = new Point(29, 166);
+            lblTenKH.Location = new Point(134, 238);
             lblTenKH.Margin = new Padding(6, 7, 6, 7);
             lblTenKH.Name = "lblTenKH";
             lblTenKH.Size = new Size(125, 30);
@@ -73,7 +73,7 @@
             // 
             // txtMaKH
             // 
-            txtMaKH.Location = new Point(189, 115);
+            txtMaKH.Location = new Point(294, 187);
             txtMaKH.Margin = new Padding(3, 4, 3, 4);
             txtMaKH.Name = "txtMaKH";
             txtMaKH.ReadOnly = true;
@@ -85,7 +85,7 @@
             lblMaKH.BorderStyle = BorderStyle.FixedSingle;
             lblMaKH.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblMaKH.ForeColor = SystemColors.ActiveCaptionText;
-            lblMaKH.Location = new Point(29, 115);
+            lblMaKH.Location = new Point(134, 187);
             lblMaKH.Margin = new Padding(6, 7, 6, 7);
             lblMaKH.Name = "lblMaKH";
             lblMaKH.Size = new Size(125, 30);
@@ -101,7 +101,7 @@
             btnTimKiem.Depth = 0;
             btnTimKiem.HighEmphasis = true;
             btnTimKiem.Icon = null;
-            btnTimKiem.Location = new Point(1186, 72);
+            btnTimKiem.Location = new Point(1291, 144);
             btnTimKiem.Margin = new Padding(5);
             btnTimKiem.MouseState = MaterialSkin.MouseState.HOVER;
             btnTimKiem.Name = "btnTimKiem";
@@ -122,7 +122,7 @@
             btnLamMoi.Depth = 0;
             btnLamMoi.HighEmphasis = true;
             btnLamMoi.Icon = null;
-            btnLamMoi.Location = new Point(541, 72);
+            btnLamMoi.Location = new Point(646, 144);
             btnLamMoi.Margin = new Padding(5);
             btnLamMoi.MouseState = MaterialSkin.MouseState.HOVER;
             btnLamMoi.Name = "btnLamMoi";
@@ -145,7 +145,7 @@
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.HighEmphasis = true;
             btnDelete.Icon = null;
-            btnDelete.Location = new Point(380, 461);
+            btnDelete.Location = new Point(485, 533);
             btnDelete.Margin = new Padding(5);
             btnDelete.MouseState = MaterialSkin.MouseState.HOVER;
             btnDelete.Name = "btnDelete";
@@ -166,7 +166,7 @@
             btnUpdate.Depth = 0;
             btnUpdate.HighEmphasis = true;
             btnUpdate.Icon = null;
-            btnUpdate.Location = new Point(222, 461);
+            btnUpdate.Location = new Point(327, 533);
             btnUpdate.Margin = new Padding(5);
             btnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
             btnUpdate.Name = "btnUpdate";
@@ -187,7 +187,7 @@
             btnAdd.Depth = 0;
             btnAdd.HighEmphasis = true;
             btnAdd.Icon = null;
-            btnAdd.Location = new Point(69, 461);
+            btnAdd.Location = new Point(174, 533);
             btnAdd.Margin = new Padding(5);
             btnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             btnAdd.Name = "btnAdd";
@@ -207,7 +207,7 @@
             txtTimKiem.Depth = 0;
             txtTimKiem.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtTimKiem.LeadingIcon = null;
-            txtTimKiem.Location = new Point(655, 72);
+            txtTimKiem.Location = new Point(760, 144);
             txtTimKiem.MaxLength = 50;
             txtTimKiem.MouseState = MaterialSkin.MouseState.OUT;
             txtTimKiem.Multiline = false;
@@ -220,7 +220,7 @@
             // dataGridViewKhachHang
             // 
             dataGridViewKhachHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewKhachHang.Location = new Point(541, 154);
+            dataGridViewKhachHang.Location = new Point(646, 226);
             dataGridViewKhachHang.Name = "dataGridViewKhachHang";
             dataGridViewKhachHang.RowHeadersWidth = 51;
             dataGridViewKhachHang.Size = new Size(732, 434);
@@ -230,7 +230,7 @@
             // 
             // txtSDT
             // 
-            txtSDT.Location = new Point(189, 219);
+            txtSDT.Location = new Point(294, 291);
             txtSDT.Margin = new Padding(3, 4, 3, 4);
             txtSDT.Name = "txtSDT";
             txtSDT.Size = new Size(309, 27);
@@ -241,7 +241,7 @@
             lblSDT.BorderStyle = BorderStyle.FixedSingle;
             lblSDT.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblSDT.ForeColor = SystemColors.ActiveCaptionText;
-            lblSDT.Location = new Point(29, 219);
+            lblSDT.Location = new Point(134, 291);
             lblSDT.Margin = new Padding(6, 7, 6, 7);
             lblSDT.Name = "lblSDT";
             lblSDT.Size = new Size(125, 30);
@@ -251,7 +251,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(189, 270);
+            txtEmail.Location = new Point(294, 342);
             txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(309, 27);
@@ -262,7 +262,7 @@
             lblEmail.BorderStyle = BorderStyle.FixedSingle;
             lblEmail.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblEmail.ForeColor = SystemColors.ActiveCaptionText;
-            lblEmail.Location = new Point(29, 270);
+            lblEmail.Location = new Point(134, 342);
             lblEmail.Margin = new Padding(6, 7, 6, 7);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(125, 30);
@@ -272,7 +272,7 @@
             // 
             // richTextDiaChi
             // 
-            richTextDiaChi.Location = new Point(189, 323);
+            richTextDiaChi.Location = new Point(294, 395);
             richTextDiaChi.Margin = new Padding(3, 4, 3, 4);
             richTextDiaChi.Name = "richTextDiaChi";
             richTextDiaChi.Size = new Size(309, 61);
@@ -284,7 +284,7 @@
             lblDiaChi.BorderStyle = BorderStyle.FixedSingle;
             lblDiaChi.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblDiaChi.ForeColor = SystemColors.ActiveCaptionText;
-            lblDiaChi.Location = new Point(26, 322);
+            lblDiaChi.Location = new Point(131, 394);
             lblDiaChi.Margin = new Padding(6, 7, 6, 7);
             lblDiaChi.Name = "lblDiaChi";
             lblDiaChi.Size = new Size(128, 30);
@@ -297,8 +297,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Snap ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.Location = new Point(56, 32);
+            label1.Location = new Point(161, 104);
             label1.Name = "label1";
             label1.Size = new Size(407, 36);
             label1.TabIndex = 63;
@@ -308,8 +307,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1299, 623);
+            ClientSize = new Size(1587, 708);
             Controls.Add(label1);
             Controls.Add(richTextDiaChi);
             Controls.Add(lblDiaChi);

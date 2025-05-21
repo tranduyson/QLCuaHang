@@ -33,7 +33,7 @@ namespace QLCuaHang.DAL
 
             foreach (DataRow row in data.Rows)
             {
-                ChucVuDTO cv = new ChucVuDTO(
+                ChucVuDTO cv = new ChucVuDTO(   
                     row["MaCV"].ToString(),
                     row["TenCV"].ToString(),
                     float.Parse(row["HeSoLuong"].ToString())

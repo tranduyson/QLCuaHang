@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void comSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

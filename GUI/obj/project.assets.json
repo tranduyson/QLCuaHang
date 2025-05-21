@@ -19,6 +19,28 @@
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       },
+      "FastReport.OpenSource/2025.2.0": {
+        "type": "package",
+        "dependencies": {
+          "FastReport.Compat": "2025.2.0"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/FastReport.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/FastReport.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/FastReport.OpenSource.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/FastReport.OpenSource.props": {}
+        }
+      },
       "MaterialSkin.2/2.3.1": {
         "type": "package",
         "compile": {
@@ -499,6 +521,28 @@
         "lib/net462/FastReport.Compat.dll",
         "lib/net6.0-windows7.0/FastReport.Compat.dll",
         "lib/net6.0/FastReport.Compat.dll"
+      ]
+    },
+    "FastReport.OpenSource/2025.2.0": {
+      "sha512": "eeU567ztJAN66LNK/uzi3G3gi+PwTwNM7p+lx+iHpMmZ8hcln42n63fmbS8TTEsvLHKgw+GabOJhESoGDB5urQ==",
+      "type": "package",
+      "path": "fastreport.opensource/2025.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FastReport MIT license.md",
+        "build/FastReport.OpenSource.props",
+        "buildMultiTargeting/FastReport.OpenSource.props",
+        "buildTransitive/FastReport.OpenSource.props",
+        "fastreport.opensource.2025.2.0.nupkg.sha512",
+        "fastreport.opensource.nuspec",
+        "frlogo192.png",
+        "lib/net462/FastReport.dll",
+        "lib/net462/FastReport.xml",
+        "lib/net6.0-windows7.0/FastReport.dll",
+        "lib/net6.0-windows7.0/FastReport.xml",
+        "lib/net6.0/FastReport.dll",
+        "lib/net6.0/FastReport.xml"
       ]
     },
     "MaterialSkin.2/2.3.1": {
@@ -1200,6 +1244,7 @@
       "BLL >= 1.0.0",
       "DTO >= 1.0.0",
       "FastReport.Compat >= 2025.2.0",
+      "FastReport.OpenSource >= 2025.2.0",
       "MaterialSkin.2 >= 2.3.1",
       "Microsoft.ReportViewer.Common >= 10.0.40219.1",
       "Microsoft.ReportViewer.WinForms >= 10.0.40219.1",
@@ -1265,6 +1310,10 @@
         "targetAlias": "net8.0-windows",
         "dependencies": {
           "FastReport.Compat": {
+            "target": "Package",
+            "version": "[2025.2.0, )"
+          },
+          "FastReport.OpenSource": {
             "target": "Package",
             "version": "[2025.2.0, )"
           },

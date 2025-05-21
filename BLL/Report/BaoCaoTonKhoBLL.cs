@@ -1,43 +1,23 @@
-﻿//using System;
-//using System.Data;
-//using System.IO;
-//using FastReport;
-//using QLCuaHang.DAL;
+﻿using System.Collections.Generic;
+using DTO.Report;
+using QLCuaHang.DAL;
 
-//namespace QLCuaHang.BLL
-//{
-//    public class BaoCaoTonKhoBLL
-//    {
-//        private BaoCaoTonKhoDAL baoCaoDAL = new BaoCaoTonKhoDAL();
+namespace QLCuaHang.BLL
+{
+    public class BaoCaoTonKhoBLL
+    {
+        private BaoCaoTonKhoDAL baoCaoDAL = new BaoCaoTonKhoDAL();
 
-//        public DataTable LayTonKho()
-//        {
-//            return baoCaoDAL.LayTonKho();
-//        }
+        // Hàm không tham số
+        public List<BaoCaoTonKhoDTO> LayTonKho()
+        {
+            return baoCaoDAL.LayBaoCaoTonKhoDTOs();
+        }
 
-//        public void TaoBaoCaoTonKho(bool hienThiXemTruoc = true)
-//        {
-//            DataTable dt = LayTonKho();
-
-//            //using (Report report = new Report())
-//            //{
-//            //    // Tải template báo cáo
-//            //    report.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reports", "BaoCaoTonKho.frx"));
-
-//            //    // Đăng ký nguồn dữ liệu
-//            //    report.RegisterData(dt, "TonKhoData");
-
-//            //    // Đặt các tham số báo cáo
-//            //    report.SetParameterValue("NgayBaoCao", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
-
-//            //    // Hiển thị xem trước hoặc in/xuất trực tiếp
-//            //    if (hienThiXemTruoc)
-//            //    {
-//            //        report.Show();
-//            //    }
-//            //    else
-//            //        report.Prepare();
-//            //}
-//        }
-//    }
-//}
+        // ➕ Thêm hàm có tham số tìm kiếm
+        public List<BaoCaoTonKhoDTO> LayTonKho(string tenSanPham)
+        {
+            return baoCaoDAL.LayBaoCaoTonKhoDTOs(tenSanPham);
+        }
+    }
+}

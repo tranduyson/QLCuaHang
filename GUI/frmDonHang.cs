@@ -623,10 +623,6 @@ namespace GUI
             XoaChiTietSanPham();
         }
 
-        private void comSanPham_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtTongTien_Click(object sender, EventArgs e)
         {
@@ -634,6 +630,11 @@ namespace GUI
         }
 
         private void frmDonHang_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comSanPham_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }

@@ -41,8 +41,8 @@
             // lblTenDangNhap
             // 
             lblTenDangNhap.AutoSize = true;
+            lblTenDangNhap.BackColor = SystemColors.Control;
             lblTenDangNhap.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTenDangNhap.Image = (Image)resources.GetObject("lblTenDangNhap.Image");
             lblTenDangNhap.Location = new Point(181, 134);
             lblTenDangNhap.Name = "lblTenDangNhap";
             lblTenDangNhap.Size = new Size(128, 23);
@@ -53,7 +53,6 @@
             // 
             lblMatKhau.AutoSize = true;
             lblMatKhau.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMatKhau.Image = (Image)resources.GetObject("lblMatKhau.Image");
             lblMatKhau.Location = new Point(181, 198);
             lblMatKhau.Name = "lblMatKhau";
             lblMatKhau.Size = new Size(88, 23);
@@ -96,7 +95,6 @@
             // ckHienThiMatKhau
             // 
             ckHienThiMatKhau.AutoSize = true;
-            ckHienThiMatKhau.BackgroundImage = (Image)resources.GetObject("ckHienThiMatKhau.BackgroundImage");
             ckHienThiMatKhau.Location = new Point(202, 257);
             ckHienThiMatKhau.Name = "ckHienThiMatKhau";
             ckHienThiMatKhau.Size = new Size(148, 24);
@@ -111,7 +109,6 @@
             label1.AutoSize = true;
             label1.Font = new Font("Snap ITC", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Image = (Image)resources.GetObject("label1.Image");
             label1.Location = new Point(140, 63);
             label1.Name = "label1";
             label1.Size = new Size(495, 44);
@@ -123,7 +120,6 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(702, 405);
             Controls.Add(label1);

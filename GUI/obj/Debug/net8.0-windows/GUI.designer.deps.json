@@ -19,6 +19,17 @@
           }
         }
       },
+      "FastReport.OpenSource/2025.2.0": {
+        "dependencies": {
+          "FastReport.Compat": "2025.2.0"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/FastReport.dll": {
+            "assemblyVersion": "2025.2.0.0",
+            "fileVersion": "2025.2.0.0"
+          }
+        }
+      },
       "MaterialSkin.2/2.3.1": {
         "runtime": {
           "lib/net5.0-windows7.0/MaterialSkin.dll": {
@@ -382,6 +393,13 @@
       "sha512": "sha512-coh8wvQRG4ZbjVSWiJDKUU2ua8C02zHLQ3Z5/WTsvMmMZy7FY4oYo9zrkxikYqX1CnbbjllsaUS9VqmIB+xlVQ==",
       "path": "fastreport.compat/2025.2.0",
       "hashPath": "fastreport.compat.2025.2.0.nupkg.sha512"
+    },
+    "FastReport.OpenSource/2025.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eeU567ztJAN66LNK/uzi3G3gi+PwTwNM7p+lx+iHpMmZ8hcln42n63fmbS8TTEsvLHKgw+GabOJhESoGDB5urQ==",
+      "path": "fastreport.opensource/2025.2.0",
+      "hashPath": "fastreport.opensource.2025.2.0.nupkg.sha512"
     },
     "MaterialSkin.2/2.3.1": {
       "type": "package",

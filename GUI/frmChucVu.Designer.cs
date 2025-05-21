@@ -55,7 +55,7 @@
             btnLamMoi.Depth = 0;
             btnLamMoi.HighEmphasis = true;
             btnLamMoi.Icon = null;
-            btnLamMoi.Location = new Point(534, 85);
+            btnLamMoi.Location = new Point(633, 122);
             btnLamMoi.Margin = new Padding(5);
             btnLamMoi.MouseState = MaterialSkin.MouseState.HOVER;
             btnLamMoi.Name = "btnLamMoi";
@@ -78,7 +78,7 @@
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.HighEmphasis = true;
             btnDelete.Icon = null;
-            btnDelete.Location = new Point(374, 373);
+            btnDelete.Location = new Point(473, 410);
             btnDelete.Margin = new Padding(5);
             btnDelete.MouseState = MaterialSkin.MouseState.HOVER;
             btnDelete.Name = "btnDelete";
@@ -99,7 +99,7 @@
             btnUpdate.Depth = 0;
             btnUpdate.HighEmphasis = true;
             btnUpdate.Icon = null;
-            btnUpdate.Location = new Point(219, 373);
+            btnUpdate.Location = new Point(318, 410);
             btnUpdate.Margin = new Padding(5);
             btnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
             btnUpdate.Name = "btnUpdate";
@@ -120,7 +120,7 @@
             btnAdd.Depth = 0;
             btnAdd.HighEmphasis = true;
             btnAdd.Icon = null;
-            btnAdd.Location = new Point(63, 373);
+            btnAdd.Location = new Point(162, 410);
             btnAdd.Margin = new Padding(5);
             btnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             btnAdd.Name = "btnAdd";
@@ -140,7 +140,7 @@
             txtTimKiem.Depth = 0;
             txtTimKiem.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtTimKiem.LeadingIcon = null;
-            txtTimKiem.Location = new Point(636, 85);
+            txtTimKiem.Location = new Point(735, 122);
             txtTimKiem.MaxLength = 50;
             txtTimKiem.MouseState = MaterialSkin.MouseState.OUT;
             txtTimKiem.Multiline = false;
@@ -153,7 +153,7 @@
             // dataGridViewChucVu
             // 
             dataGridViewChucVu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewChucVu.Location = new Point(534, 158);
+            dataGridViewChucVu.Location = new Point(633, 195);
             dataGridViewChucVu.Name = "dataGridViewChucVu";
             dataGridViewChucVu.RowHeadersWidth = 51;
             dataGridViewChucVu.Size = new Size(732, 434);
@@ -169,7 +169,7 @@
             btnTimKiem.Depth = 0;
             btnTimKiem.HighEmphasis = true;
             btnTimKiem.Icon = null;
-            btnTimKiem.Location = new Point(1161, 85);
+            btnTimKiem.Location = new Point(1260, 122);
             btnTimKiem.Margin = new Padding(5);
             btnTimKiem.MouseState = MaterialSkin.MouseState.HOVER;
             btnTimKiem.Name = "btnTimKiem";
@@ -184,7 +184,7 @@
             // 
             // txtTenCV
             // 
-            txtTenCV.Location = new Point(185, 171);
+            txtTenCV.Location = new Point(284, 208);
             txtTenCV.Margin = new Padding(3, 4, 3, 4);
             txtTenCV.Name = "txtTenCV";
             txtTenCV.Size = new Size(309, 27);
@@ -195,7 +195,7 @@
             lblSDT.BorderStyle = BorderStyle.FixedSingle;
             lblSDT.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblSDT.ForeColor = SystemColors.ActiveCaptionText;
-            lblSDT.Location = new Point(25, 171);
+            lblSDT.Location = new Point(124, 208);
             lblSDT.Margin = new Padding(6, 7, 6, 7);
             lblSDT.Name = "lblSDT";
             lblSDT.Size = new Size(115, 30);
@@ -205,7 +205,7 @@
             // 
             // numHeSoLuong
             // 
-            numHeSoLuong.Location = new Point(185, 231);
+            numHeSoLuong.Location = new Point(284, 268);
             numHeSoLuong.Margin = new Padding(3, 4, 3, 4);
             numHeSoLuong.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numHeSoLuong.Name = "numHeSoLuong";
@@ -215,7 +215,7 @@
             // 
             // txtMaCV
             // 
-            txtMaCV.Location = new Point(185, 122);
+            txtMaCV.Location = new Point(284, 159);
             txtMaCV.Margin = new Padding(3, 4, 3, 4);
             txtMaCV.Name = "txtMaCV";
             txtMaCV.ReadOnly = true;
@@ -227,7 +227,7 @@
             lblHeSoLuong.BorderStyle = BorderStyle.FixedSingle;
             lblHeSoLuong.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblHeSoLuong.ForeColor = SystemColors.ActiveCaptionText;
-            lblHeSoLuong.Location = new Point(25, 231);
+            lblHeSoLuong.Location = new Point(124, 268);
             lblHeSoLuong.Margin = new Padding(6, 7, 6, 7);
             lblHeSoLuong.Name = "lblHeSoLuong";
             lblHeSoLuong.Size = new Size(115, 30);
@@ -240,7 +240,7 @@
             lblHoTen.BorderStyle = BorderStyle.FixedSingle;
             lblHoTen.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblHoTen.ForeColor = SystemColors.ActiveCaptionText;
-            lblHoTen.Location = new Point(25, 120);
+            lblHoTen.Location = new Point(124, 157);
             lblHoTen.Margin = new Padding(6, 7, 6, 7);
             lblHoTen.Name = "lblHoTen";
             lblHoTen.Size = new Size(115, 30);
@@ -253,8 +253,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Snap ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.Location = new Point(121, 31);
+            label1.Location = new Point(220, 68);
             label1.Name = "label1";
             label1.Size = new Size(319, 36);
             label1.TabIndex = 38;
@@ -264,8 +263,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1299, 679);
+            ClientSize = new Size(1502, 679);
             Controls.Add(label1);
             Controls.Add(txtTenCV);
             Controls.Add(lblSDT);

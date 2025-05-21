@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDanhSachDonHang));
             dataGridViewDSDonHang = new DataGridView();
             groupBox1 = new GroupBox();
             lblMaHD = new Label();
@@ -49,8 +48,9 @@
             // 
             // dataGridViewDSDonHang
             // 
+            dataGridViewDSDonHang.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridViewDSDonHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDSDonHang.Location = new Point(12, 206);
+            dataGridViewDSDonHang.Location = new Point(107, 236);
             dataGridViewDSDonHang.Name = "dataGridViewDSDonHang";
             dataGridViewDSDonHang.RowHeadersWidth = 51;
             dataGridViewDSDonHang.Size = new Size(1275, 504);
@@ -58,7 +58,6 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackgroundImage = (Image)resources.GetObject("groupBox1.BackgroundImage");
             groupBox1.Controls.Add(lblMaHD);
             groupBox1.Controls.Add(txtMaHD);
             groupBox1.Controls.Add(btnTimKiem);
@@ -72,7 +71,7 @@
             groupBox1.Controls.Add(lblHoTen);
             groupBox1.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.Red;
-            groupBox1.Location = new Point(12, 58);
+            groupBox1.Location = new Point(107, 88);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(1275, 142);
             groupBox1.TabIndex = 5;
@@ -216,7 +215,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(457, 9);
+            label1.Location = new Point(511, 39);
             label1.Name = "label1";
             label1.Size = new Size(486, 41);
             label1.TabIndex = 6;
@@ -227,7 +226,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1299, 722);
+            ClientSize = new Size(1468, 772);
             Controls.Add(label1);
             Controls.Add(groupBox1);
             Controls.Add(dataGridViewDSDonHang);

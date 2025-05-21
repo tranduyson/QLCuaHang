@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RUBwQbSdihw=",
+  "dgSpecHash": "Sryy/8R3jdA=",
   "success": true,
   "projectFilePath": "D:\\QLCuaHang\\GUI\\GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DUY SON\\.nuget\\packages\\fastreport.compat\\2025.2.0\\fastreport.compat.2025.2.0.nupkg.sha512",
+    "C:\\Users\\DUY SON\\.nuget\\packages\\fastreport.opensource\\2025.2.0\\fastreport.opensource.2025.2.0.nupkg.sha512",
     "C:\\Users\\DUY SON\\.nuget\\packages\\materialskin.2\\2.3.1\\materialskin.2.2.3.1.nupkg.sha512",
     "C:\\Users\\DUY SON\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.2\\microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",
     "C:\\Users\\DUY SON\\.nuget\\packages\\microsoft.codeanalysis.common\\4.0.1\\microsoft.codeanalysis.common.4.0.1.nupkg.sha512",

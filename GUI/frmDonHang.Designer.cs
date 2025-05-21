@@ -122,7 +122,7 @@
             lblTongTien.BorderStyle = BorderStyle.FixedSingle;
             lblTongTien.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblTongTien.ForeColor = SystemColors.ActiveCaptionText;
-            lblTongTien.Location = new Point(467, 640);
+            lblTongTien.Location = new Point(557, 677);
             lblTongTien.Margin = new Padding(6, 7, 6, 7);
             lblTongTien.Name = "lblTongTien";
             lblTongTien.Size = new Size(81, 30);
@@ -177,7 +177,6 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackgroundImage = (Image)resources.GetObject("groupBox1.BackgroundImage");
             groupBox1.Controls.Add(txtMaNV);
             groupBox1.Controls.Add(lblMaNV);
             groupBox1.Controls.Add(txtTenKH);
@@ -194,7 +193,7 @@
             groupBox1.Controls.Add(lblHoTen);
             groupBox1.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.Red;
-            groupBox1.Location = new Point(12, 56);
+            groupBox1.Location = new Point(102, 93);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(1275, 209);
             groupBox1.TabIndex = 4;
@@ -338,7 +337,6 @@
             // 
             // groupBox2
             // 
-            groupBox2.BackgroundImage = (Image)resources.GetObject("groupBox2.BackgroundImage");
             groupBox2.Controls.Add(txtDonVi);
             groupBox2.Controls.Add(lbl);
             groupBox2.Controls.Add(comSanPham);
@@ -358,7 +356,7 @@
             groupBox2.FlatStyle = FlatStyle.Flat;
             groupBox2.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox2.ForeColor = Color.Red;
-            groupBox2.Location = new Point(12, 260);
+            groupBox2.Location = new Point(102, 297);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(1275, 368);
             groupBox2.TabIndex = 56;
@@ -520,7 +518,7 @@
             lblTongTienBangChu.AutoSize = true;
             lblTongTienBangChu.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTongTienBangChu.ForeColor = Color.Black;
-            lblTongTienBangChu.Location = new Point(716, 645);
+            lblTongTienBangChu.Location = new Point(806, 682);
             lblTongTienBangChu.Name = "lblTongTienBangChu";
             lblTongTienBangChu.Size = new Size(19, 20);
             lblTongTienBangChu.TabIndex = 64;
@@ -534,7 +532,7 @@
             btnTaoDonHang.Depth = 0;
             btnTaoDonHang.HighEmphasis = true;
             btnTaoDonHang.Icon = null;
-            btnTaoDonHang.Location = new Point(1076, 672);
+            btnTaoDonHang.Location = new Point(1166, 709);
             btnTaoDonHang.Margin = new Padding(5);
             btnTaoDonHang.MouseState = MaterialSkin.MouseState.HOVER;
             btnTaoDonHang.Name = "btnTaoDonHang";
@@ -552,7 +550,7 @@
             txtTongTien.AutoSize = true;
             txtTongTien.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTongTien.ForeColor = Color.Black;
-            txtTongTien.Location = new Point(580, 645);
+            txtTongTien.Location = new Point(670, 682);
             txtTongTien.Name = "txtTongTien";
             txtTongTien.Size = new Size(14, 20);
             txtTongTien.TabIndex = 65;
@@ -563,8 +561,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Image = (Image)resources.GetObject("label2.Image");
-            label2.Location = new Point(499, 9);
+            label2.Location = new Point(589, 46);
             label2.Name = "label2";
             label2.Size = new Size(374, 46);
             label2.TabIndex = 66;
@@ -574,8 +571,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1299, 731);
+            ClientSize = new Size(1476, 731);
             Controls.Add(label2);
             Controls.Add(txtTongTien);
             Controls.Add(lblTongTienBangChu);

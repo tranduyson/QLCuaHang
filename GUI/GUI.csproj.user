@@ -10,6 +10,24 @@
     <Compile Update="frmBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmBaoCaoDoanhThuKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmBaoCaoLuongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmBaoCaoSanPhamBanChay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmBaoCaoTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmBCChiTietDonHangTheoMaDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmBCDoanhThuTheoNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmChiTietPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,9 +44,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmLuong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmNhanVien.cs">

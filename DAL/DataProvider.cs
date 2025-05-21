@@ -60,6 +60,23 @@ namespace QLCuaHang.DAL
             return data;
         }
 
+        public DataTable ExecuteQueryReport(string query, SqlParameter[] parameters)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable data = new DataTable();
+                adapter.Fill(data);
+                return data;
+            }
+        }
+
         // Hàm này sẽ thực thi các truy vấn với SqlParameter[]
         public  DataTable ExecuteQueryWithParameters(string query, SqlParameter[] parameters = null)
         {

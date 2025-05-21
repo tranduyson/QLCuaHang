@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using DTO.Report;
 
 namespace QLCuaHang.DAL
 {
     public class BaoCaoSanPhamBanChayDAL
     {
-        public DataTable LaySanPhamBanChay(DateTime? tuNgay = null, DateTime? denNgay = null, int soLuongHienThi = 20)
+        public DataTable LaySanPhamBanChayDataTable(string tuNgay = null, string denNgay = null, int soLuongHienThi = 20)
         {
             string query = @"
                 SELECT TOP (@SoLuongHienThi) sp.MaSP, sp.TenSP, sp.DonVi, 
@@ -23,12 +24,35 @@ namespace QLCuaHang.DAL
 
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@TuNgay", tuNgay ?? (object)DBNull.Value),
-                new SqlParameter("@DenNgay", denNgay ?? (object)DBNull.Value),
+                new SqlParameter("@TuNgay", string.IsNullOrEmpty(tuNgay) ? (object)DBNull.Value : DateTime.Parse(tuNgay)),
+                new SqlParameter("@DenNgay", string.IsNullOrEmpty(denNgay) ? (object)DBNull.Value : DateTime.Parse(denNgay)),
                 new SqlParameter("@SoLuongHienThi", soLuongHienThi)
             };
 
             return DataProvider.Instance.ExecuteQueryWithParameters(query, parameters);
+        }
+
+        public List<SanPhamBanChayDTO> LaySanPhamBanChayDTOs(string tuNgay = null, string denNgay = null, int soLuongHienThi = 20)
+        {
+            DataTable dt = LaySanPhamBanChayDataTable(tuNgay, denNgay, soLuongHienThi);
+
+            List<SanPhamBanChayDTO> result = new List<SanPhamBanChayDTO>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                result.Add(new SanPhamBanChayDTO
+                {
+                    MaSP = row["MaSP"].ToString(),
+                    TenSP = row["TenSP"].ToString(),
+                    DonVi = row["DonVi"].ToString(),
+                    TongSoLuong = row["TongSoLuong"] != DBNull.Value ? Convert.ToInt32(row["TongSoLuong"]) : 0,
+                    TongDoanhThu = row["TongDoanhThu"] != DBNull.Value ? Convert.ToDecimal(row["TongDoanhThu"]) : 0,
+                    GiaBan = row["GiaBan"] != DBNull.Value ? Convert.ToDecimal(row["GiaBan"]) : 0,
+                    TonKho = row["TonKho"] != DBNull.Value ? Convert.ToInt32(row["TonKho"]) : 0
+                });
+            }
+
+            return result;
         }
     }
 }
